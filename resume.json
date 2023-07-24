@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Joel Schwarzmann",
-    "email": "joel.l.schw+jobs@gmail.com",
+    "email": "joel.l.schw@gmail.com",
     "location": {
       "city": "London",
       "countryCode": "UK"
@@ -22,15 +22,15 @@
       "position": "Technical Product Manager",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/labs",
       "startDate": "2021-01-01",
-      "summary": "Transitioned into a Product role with a focus on creating long-term sustained value from Machine Learning (ML). Developed a new toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on ML development productivity.",
+      "summary": "Transitioned into a Product role with a focus on creating long-term sustained value from ML. Developed a new toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on ML development productivity.",
       
       "highlights": [
-        "Assembled and led team of 14 Engineers and Designers focused on standardisation and driving up the software engineering bar across a globally distributed portfolio of industry specific ML applications.",
+        "Assembled and led team of 14 Engineers and Designers focused on standardisation and driving code quality across a globally distributed portfolio of industry specific ML applications.",
         "Incubated a new product (working name Alloy, set to open sourcing Q1 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
-        "The practitioner-led roll out of Alloy eliminated the need for dedicated SWE or DevOps resources across the portfolio and reduced average monorepo build times by 70%",
+        "The practitioner-led roll out of Alloy eliminated the need for dedicated DevOps resources across the portfolio and reduced average monorepo build times by 70%",
         "Stewarded the Kedro (8.5K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
-        "Led significant research workteam focused on rethinking Kedro's configuration management mechanism focussing find the right balance between imperative flexibility and declarative readability. ",
-        "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced reporting approach for CLI Python apps and approved consent workflow."
+        "Led significant research workteam focused on rethinking Kedro's configuration management mechanism focussing on finding the right balance between imperative flexibility and declarative readability. ",
+        "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced unified approach for CLI Python apps and approved consent workflow."
       ]
     },
     {
@@ -42,9 +42,9 @@
       "endDate": "2020-12-31",
       "summary": "Forward deployed Data Engineer working as part of multi-disciplinary teams delivering ML use-cases at a time large Enterprises were just beginning to build up their own Data Science capabilities. Served clients across pharmaceutical, manufacturing, insurance and motorsport contexts.",
       "highlights": [
-        "Led the development of the Reinforcement Learning (RL) powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Data sources: Physics simulation passes, live race timing information and driver radio input.",
-        "Deployed yield and deviation prediction solution for vaccine manufacturing production line. Data sources: SAP Genealogy, OSIsoft PI Sensor Data and custom scheduling software.",
-        "Built the data ingestion and feature engineering pipeline for a novel ML analysis approach to track patient journeys outcomes as they switched between various different diabetes treatments. Data sources: Electronic medical records, proprietary clinical trail data."
+        "Led the development of the RL powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars (Data sources: Physics simulation passes, live race timing information and driver radio input).",
+        "Deployed yield and deviation prediction solution for vaccine manufacturing production line (Data sources: SAP Genealogy, OSIsoft PI Sensor Data and custom scheduling software).",
+        "Built the data ingestion and feature engineering pipeline for a novel approach to track patient journeys outcomes as they switched between various different diabetes treatments (Data sources: Electronic medical records, proprietary clinical trail data)."
       ]
     },
     {
