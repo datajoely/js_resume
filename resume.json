@@ -1,0 +1,109 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Joel Schwarzmann",
+    "email": "joel.l.schw@gmail.com",
+    "phone": "(+44) 753924 5115",
+    "location": {
+      "city": "London",
+      "countryCode": "UK"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "datajoely",
+        "url": "http://github.com/datajoely"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "QuantumBlack Labs (McKinsey)",
+      "location": "London, England",
+      "position": "Technical Product Manager",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/labs",
+      "startDate": "2021-01-01",
+      "summary": "Transitioned into a Product role with a focus on creating long-term sustained value from Machine Learning (ML). Developed a new toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on ML development productivity.",
+      
+      "highlights": [
+        "Assembled and led team of 14 Engineers and Designers focused on standardisation and driving up the software engineering bar across a globally distributed portfolio of industry specific ML applications.",
+        "Incubated a new product (working name Alloy, set to open sourcing Q1 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
+        "The practitioner-led roll out of Alloy eliminated the need for dedicated SWE or DevOps resources across the portfolio and reduced average monorepo build times by 70%",
+        "Stewarded the Kedro (8.5K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
+        "Led significant research workteam focused on rethinking Kedro's configuration management mechanism focussing find the right balance between imperative flexibility and declarative readability. ",
+        "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced reporting approach for CLI Python apps and approved consent workflow."
+      ]
+    },
+    {
+      "company": "QuantumBlack (McKinsey)",
+      "location": "London, England",
+      "position": "Senior Data Engineer II",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/",
+      "startDate": "2017-02-28",
+      "endDate": "2020-12-31",
+      "summary": "Forward deployed Data Engineer working as part of multi-disciplinary teams delivering ML use-cases at a time large Enterprises were just beginning to build up their own Data Science capabilities. Served clients across pharmaceutical, manufacturing, insurance and motorsport contexts.",
+      "highlights": [
+        "Led the development of the Reinforcement Learning (RL) powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Data sources: Physics simulation passes, live race timing information and driver radio input.",
+        "Deployed yield and deviation prediction solution for vaccine manufacturing production line. Data sources: SAP Genealogy, OSIsoft PI Sensor Data and custom scheduling software.",
+        "Built the data ingestion and feature engineering pipeline for a novel ML analysis approach to track patient journeys outcomes as they switched between various different diabetes treatments. Data sources: Electronic medical records, proprietary clinical trail data."
+      ]
+    },
+    {
+      "company": "PwC",
+      "location": "London, England",
+      "position": "Sr. Forensic Data Analyst",
+      "url": "https://www.pwc.co.uk/services/forensics.html",
+      "startDate": "2013-09-01",
+      "endDate": "2017-02-17",
+      "summary": "Data driven investigative work focusing on fraud, disputes and trade surveillance. Served clients in crisis situations across many industries, developing a toolkit for analysing poor quality structured and unstructued data using SQL and Python.",
+      "highlights": [
+        "Helped resolve creditor disputes and decommission mainframe machines in the wake of the Lehman Brothers bankruptcy.",
+        "Analysed communications in concert with outlier trading activity in relation to LIBOR frontrunning scandal."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Birmingham",
+      "url": "https://www.birmingham.ac.uk",
+      "area": "Computer Science w/ Management",
+      "studyType": "BSc. 1st Class",
+      "startDate": "2010-09-01",
+      "endDate": "2013-07-01"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Final Year Student",
+      "awarder": "University of Birmingham, School of Computer Science"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Python",
+        "SQL",
+        "Cypher"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": [
+        "dbt",
+        "PySpark",
+        "kedro",
+        "dagster"
+      ]
+    },
+    {
+      "name":"CI/CD",
+      "keywords": ["CircleCI", "GitHub Actions"]
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "theme":"jsonresume-theme-macchiato"
+  }
+}
