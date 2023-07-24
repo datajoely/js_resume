@@ -2,8 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Joel Schwarzmann",
-    "email": "joel.l.schw@gmail.com",
-    "phone": "(+44) 753924 5115",
+    "email": "joel.l.schw+jobs@gmail.com",
     "location": {
       "city": "London",
       "countryCode": "UK"
