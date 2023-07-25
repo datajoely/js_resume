@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  build-page:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -15,4 +15,17 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm install
       - run: npm run build
-      
+      - uses: actions/upload-pages-artifact@v1.0.8
+        with:
+            path: index.html
+  deploy_docs:
+    needs: build-page
+    runs-on: ubuntu-latest
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+        pages: write # to deploy to Pages
+        id-token: write # to verify the deployment originates from an appropriate source
+
+    steps:
+        - uses: actions/deploy-pages@v2
