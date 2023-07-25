@@ -23,6 +23,9 @@ jobs:
           resume_filepath: resume.json
           # modifies the index.html in-place
           output_filepath: docs/index.html
+      - name: cat
+        run: |
+          cat docs/index.html
       - name: Commit published HTML 
         id: commit
         run: |
