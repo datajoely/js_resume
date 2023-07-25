@@ -58,7 +58,8 @@
       "summary": "Data driven investigative work focusing on fraud, disputes and trade surveillance. Served clients in crisis situations across many industries, developing a toolkit for analysing poor quality structured and unstructued data using SQL and Python.",
       "highlights": [
         "Helped resolve creditor disputes and decommission mainframe machines in the wake of the Lehman Brothers bankruptcy.",
-        "Analysed communications in concert with outlier trading activity in relation to LIBOR frontrunning scandal."
+        "Analysed Bloomberg communications in concert with trading activity outliers in relation to the LIBOR frontrunning scandal.",
+        "Led development of graph database powered market surveillance tool."
       ]
     }
   ],
@@ -84,7 +85,8 @@
       "keywords": [
         "Python",
         "SQL",
-        "Cypher"
+        "Cypher",
+        "Java"
       ]
     },
     {
