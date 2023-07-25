@@ -17,8 +17,8 @@ jobs:
       - run: npm run build
       - uses: actions/upload-pages-artifact@v1.0.8
         with:
-            path: index.html
-  deploy_docs:
+            path: ./index.html
+  deploy-page:
     needs: build-page
     runs-on: ubuntu-latest
 
