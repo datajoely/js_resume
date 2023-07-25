@@ -25,12 +25,13 @@
       "summary": "Transitioned into a Product role with a focus on creating long-term sustained value from ML. Developed a new toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on ML development productivity.",
       
       "highlights": [
-        "Assembled and led team of 14 Engineers and Designers focused on standardisation and driving code quality across a globally distributed portfolio of industry specific ML applications.",
-        "Incubated a new product (working name Alloy, set to open sourcing Q1 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
+        "Assembled and led team of 14 Engineers and Designers focused on standardisation and driving code quality across a globally distributed portfolio of industry specific ML applications. Formal line manager role, responsible for product vision, staffing and professional development for the team.",
+        "Incubated a new product from scratch (working name Alloy, set to open sourcing Q1 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
         "The practitioner-led roll out of Alloy eliminated the need for dedicated DevOps resources across the portfolio and reduced average monorepo build times by 70%",
         "Stewarded the Kedro (8.5K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
-        "Led significant research workteam focused on rethinking Kedro's configuration management mechanism focussing on finding the right balance between imperative flexibility and declarative readability. ",
-        "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced unified approach for CLI Python apps and approved consent workflow."
+        "Led significant research work-steam focused on rethinking Kedro's configuration management mechanism whilst balancing imperative flexibility and declarative readability.",
+        "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced unified approach for CLI Python apps and consent workflow signed off by internal Legal.",
+        "Responsible for convening monthly community events across Product, Engineering global communities, organising quarterly Demo Days and Hackathons."
       ]
     },
     {
@@ -42,9 +43,9 @@
       "endDate": "2020-12-31",
       "summary": "Forward deployed Data Engineer working as part of multi-disciplinary teams delivering ML use-cases at a time large Enterprises were just beginning to build up their own Data Science capabilities. Served clients across pharmaceutical, manufacturing, insurance and motorsport contexts.",
       "highlights": [
-        "Led the development of the RL powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars (Data sources: Physics simulation passes, live race timing information and driver radio input).",
-        "Deployed yield and deviation prediction solution for vaccine manufacturing production line (Data sources: SAP Genealogy, OSIsoft PI Sensor Data and custom scheduling software).",
-        "Built the data ingestion and feature engineering pipeline for a novel approach to track patient journeys outcomes as they switched between various different diabetes treatments (Data sources: Electronic medical records, proprietary clinical trail data)."
+        "Led the development of the RL powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Played lead Data Engineer role ahead of season 6, returned in a Product Owner role in follow-up phase ahead of season 7. (Data sources: Physics simulation passes, live race timing information and driver radio input).",
+        "Deployed yield and deviation prediction solution for vaccine manufacturing production line. Handed over process and operations to new in-house ML team, worked with the on-site shift supervisors on how best to augment their existing workflow. (Data sources: SAP Genealogy, OSIsoft PI sensor data and custom incident management software).",
+        "Built the data ingestion and feature engineering pipeline for a novel approach to track patient journeys as they switched between various different diabetes treatments predicting their risk of Hypoglycemic events. Collaborated with medical doctors to craft comorbidity, diagnosis and procedure related independent and dependant variables.  (Data sources: Electronic medical records, proprietary clinical trail data)."
       ]
     },
     {
@@ -92,7 +93,8 @@
         "dbt",
         "PySpark",
         "kedro",
-        "dagster"
+        "dagster",
+        "kafka"
       ]
     },
     {
