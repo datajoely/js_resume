@@ -23,7 +23,7 @@ jobs:
           resume_filepath: resume.json
           # modifies the index.html in-place
           output_filepath: docs/index.html
-      - name: Commit published HTML
+      - name: Commit published HTML 
         id: commit
         run: |
           git config --local user.email "action@github.com"
