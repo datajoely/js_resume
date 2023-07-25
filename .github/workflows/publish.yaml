@@ -1,45 +1,19 @@
-# example GitHub workflow
-
-name: Publish resume in JSONResume format as Github Page
- 
+name: Resume Creator from JSON
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - main
 jobs:
-  check_run:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[ci skip]')"
     steps:
-      - run: echo "${{ github.event.head_commit.message }}"
-
-  build:
-    runs-on: ubuntu-latest
-    needs: check_run
-    steps:
-      - uses: actions/checkout@v2
-      - uses: kelvintaywl/action-jsonresume-export@v1
-        name: Export resume as HTML
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
         with:
-          theme: macchiato
-          resume_filepath: resume.json
-          # modifies the index.html in-place
-          output_filepath: docs/index.html
-      - name: Commit published HTML
-        id: commit
-        run: |
-          git config --local user.email "joel.l.schw@gmail.com"
-          git config --local user.name "datajoely"
-          if [ -n "$(git status --porcelain docs/index.html)" ]; then
-            git add docs/index.html
-            git commit -m "[ci skip] chore(docs/index.html): update resume page"
-            echo ::set-output name=exit_code::0
-          else
-            echo ::set-output name=exit_code::1
-          fi
-      - name: Push changes to pages
-        uses: ad-m/github-push-action@master
-        if: steps.commit.outputs.exit_code == 0
+          persist-credentials: false
+      - name: Build Resume and Deploy on GitHub Pages
+        uses: rajivnayanc/resume-creator-action@v4
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          branch: ${{ github.ref }}
+          FileName: resume.json
+        env:
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
