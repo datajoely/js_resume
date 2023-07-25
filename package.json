@@ -2,8 +2,8 @@
   "name": "js_cv",
   "version": "1.0.0",
   "scripts": {
-    "build": "resumed",
-    "pdf" : "npm run build && puppeteer --wait-until networkidle0 --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format A4 print resume.html resume.pdf"
+    "build": "resumed render --output index.html",
+    "pdf" : "npm run build && puppeteer --wait-until networkidle0 --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format A4 print index.html resume.pdf"
   },
   "dependencies": {
     "resumed":"latest",
