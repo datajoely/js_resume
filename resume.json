@@ -99,8 +99,8 @@
         "kafka",
         "GX",
         "Pandera",
-        "PyTest",
-        "docker"
+        "pytest",
+        "Docker"
       ]
     },
     {
