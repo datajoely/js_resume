@@ -37,8 +37,6 @@ jobs:
           else
             echo ::set-output name=exit_code::1
           fi
-      - name: List files
-        run: ls
       - name: Push changes to pages
         uses: ad-m/github-push-action@master
         if: steps.commit.outputs.exit_code == 0
