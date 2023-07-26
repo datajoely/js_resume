@@ -43,7 +43,7 @@
       "endDate": "2020-12-31",
       "summary": "Consultant Data Engineer working as part of multi-disciplinary teams delivering ML use-cases at a time large Enterprises were just beginning to build up their own Data Science capabilities. Served clients across pharmaceutical, manufacturing, insurance and motorsport contexts. Pipelines primarily constructed in PySpark.",
       "highlights": [
-        "Led the development of the RL powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Played lead Data Engineer role ahead of season 6, returned in a Product Owner role in follow-up phase ahead of season 7. (Data sources: Physics simulation passes, live race timing information and driver radio input).",
+        "Led the development of the Reinforcement Learning (RL) powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Solution focused on recommending the optimal energy deployment and drive mode strategy on a sector by sector basis. Played lead Data Engineer role ahead of season 6, returned in a Product Owner role in follow-up phase ahead of season 7. (Data sources: Physics simulation passes, live race timing information and driver radio input).",
         "Deployed yield and deviation prediction solution for vaccine manufacturing production line. Handed over process and operations to new in-house ML team, worked with the on-site shift supervisors on how best to augment their existing workflow. (Data sources: SAP Genealogy, OSIsoft PI sensor data and custom incident management software).",
         "Built the data ingestion and feature engineering pipeline for a novel approach to track patient journeys as they switched between various different diabetes treatments predicting their risk of Hypoglycemic events. Collaborated with medical doctors to craft comorbidity, diagnosis and procedure related independent and dependant variables.  (Data sources: Electronic medical records, proprietary clinical trail data)."
       ]
@@ -98,7 +98,7 @@
         "dagster",
         "kafka",
         "GX",
-        "Pandera",
+        "pandera",
         "pytest",
         "Docker"
       ]
