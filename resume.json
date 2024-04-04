@@ -5,61 +5,60 @@
     "email": "joel.l.schw@gmail.com",
     "location": {
       "city": "London",
-      "countryCode": "UK"
+      "countryCode": "GB"
     },
     "profiles": [
       {
         "network": "GitHub",
         "username": "datajoely",
-        "url": "http://github.com/datajoely"
+        "url": "https://github.com/datajoely"
       }
     ]
   },
   "work": [
     {
       "company": "QuantumBlack Labs (a McKinsey company)",
-      "location": "London, England",
+      "location": "London, United Kingdom",
       "position": "Principal Technical Product Manager",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/labs",
       "startDate": "2021-01-01",
-      "summary": "Transitioned into a Product role with a focus on developer tooling and enabling sustained value from ML. Developed an additional toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on other initatives.",
-      
+      "summary": "Transitioned into a Product role with a focus on developer tooling and enabling sustained value from ML. Developed an additional toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on other initiatives.",
       "highlights": [
-        "Assembled and led team of 14 Engineers, PMs and Designers focused on driving software engineering excellence across a globally distributed portfolio of industry specific ML applications. Formal line manager role, responsible for product vision, staffing and professional development for the whole team.",
-        "Currently focused on a novel 'ML Models as a Service' platform enabling our teams to serve clients via a SaaS model. Responsible for stewarding the security sign-off, go to market collateral and build.",
-        "Incubated a new developer-tooling product from scratch (working name Alloy, set to open source Q2 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
+        "Assembled and led a team of 14 Engineers, PMs, and Designers focused on driving software engineering excellence across a globally distributed portfolio of industry-specific ML applications. Held a formal line manager role, responsible for product vision, staffing, and professional development for the whole team.",
+        "Currently focused on a novel 'ML Models as a Service' platform enabling our teams to serve clients via a SaaS model. Responsible for stewarding the security sign-off, go-to-market collateral, and build.",
+        "Incubated a new developer-tooling product from scratch (working name Alloy, set to open source Q2 2024) which abstracts the complexities of Python packaging, CI/CD, and TDD specifically for Data Scientist and Data Engineer personas.",
         "Stewarded the Kedro (9.3K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
-        "Led significant research work-steam focused on rethinking Kedro's configuration management mechanism whilst balancing imperative flexibility and declarative readability.",
-        "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced unified approach for CLI Python apps and consent workflow signed off by internal Legal.",
-        "Responsible for convening monthly community events across Product, Engineering global communities, organising quarterly Demo Days and Hackathons."
+        "Led significant research work-stream focused on rethinking Kedro's configuration management mechanism while balancing imperative flexibility and declarative readability.",
+        "Responsible for driving product telemetry privacy and technical best practices across the organization. Introduced a unified approach for CLI Python apps and a consent workflow signed off by internal Legal.",
+        "Convened monthly community events across Product, Engineering global communities, organizing quarterly Demo Days and Hackathons."
       ]
     },
     {
       "company": "QuantumBlack (a McKinsey company)",
-      "location": "London, England",
+      "location": "London, United Kingdom",
       "position": "Principal (Jr.) Data Engineer",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/",
       "startDate": "2017-02-28",
       "endDate": "2020-12-31",
-      "summary": "Consultant Data Engineer working as part of multi-disciplinary teams delivering ML use-cases at a time large Enterprises were just beginning to build up their own Data Science capabilities. Served clients across pharmaceutical, manufacturing, insurance and motorsport contexts. Pipelines primarily constructed in PySpark.",
+      "summary": "Consultant Data Engineer working as part of multi-disciplinary teams delivering ML use-cases at a time large Enterprises were just beginning to build up their own Data Science capabilities. Served clients across pharmaceutical, manufacturing, insurance, and motorsport contexts. Pipelines primarily constructed in PySpark.",
       "highlights": [
-        "Led the development of the Reinforcement Learning (RL) powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Solution focused on recommending the optimal energy deployment and drive mode strategy on a sector by sector basis. Played lead Data Engineer role ahead of season 6, returned in a Product Owner role in follow-up phase ahead of season 7. (Data sources: Physics simulation passes, live race timing information and driver radio input).",
-        "Deployed yield and deviation prediction solution for vaccine manufacturing production line. Handed over process and operations to new in-house ML team, worked with the on-site shift supervisors on how best to augment their existing workflow. (Data sources: SAP Genealogy, OSIsoft PI sensor data and custom incident management software).",
-        "Built the data ingestion and feature engineering pipeline for a novel approach to track patient journeys as they switched between various different diabetes treatments predicting their risk of Hypoglycemic events. Collaborated with medical doctors to craft comorbidity, diagnosis and procedure related independent and dependant variables.  (Data sources: Electronic medical records, proprietary clinical trail data)."
+        "Led the development of the Reinforcement Learning (RL) powered race strategy software used by a winning Formula E team to facilitate mid-race decisions between the Drivers and Race Engineers in both cars. Solution focused on recommending the optimal energy deployment and drive mode strategy on a sector-by-sector basis. Played lead Data Engineer role ahead of season 6, returned in a Product Owner role in the follow-up phase ahead of season 7. (Data sources: Physics simulation passes, live race timing information, and driver radio input).",
+        "Deployed yield and deviation prediction solution for vaccine manufacturing production line. Handed over process and operations to a new in-house ML team, worked with the on-site shift supervisors on how best to augment their existing workflow. (Data sources: SAP Genealogy, OSIsoft PI sensor data, and custom incident management software).",
+        "Built the data ingestion and feature engineering pipeline for a novel approach to track patient journeys as they switched between various different diabetes treatments predicting their risk of Hypoglycemic events. Collaborated with medical doctors to craft comorbidity, diagnosis, and procedure-related independent and dependent variables.  (Data sources: Electronic medical records, proprietary clinical trial data)."
       ]
     },
     {
       "company": "PwC",
-      "location": "London, England",
-      "position": "Sr. Forensic Data Analyst",
+      "location": "London, United Kingdom",
+      "position": "Senior Forensic Data Analyst",
       "url": "https://www.pwc.co.uk/services/forensics.html",
       "startDate": "2013-09-01",
       "endDate": "2017-02-17",
-      "summary": "Data driven investigative work focusing on fraud, disputes and trade surveillance. Served clients in crisis situations across many industries, developing a toolkit for analysing poor quality structured and unstructued data using SQL and Python.",
+      "summary": "Data-driven investigative work focusing on fraud, disputes, and trade surveillance. Served clients in crisis situations across many industries, developing a toolkit for analysing poor-quality structured and unstructured data using SQL and Python.",
       "highlights": [
         "Helped resolve creditor disputes and decommission mainframe machines in the wake of the Lehman Brothers bankruptcy.",
-        "Analysed Bloomberg communications in concert with trading activity outliers in relation to the LIBOR frontrunning scandal.",
-        "Led development of graph database powered market surveillance tool."
+        "Analyzed Bloomberg communications in concert with trading activity outliers in relation to the LIBOR frontrunning scandal.",
+        "Led development of graph database-powered market surveillance tool."
       ]
     }
   ],
@@ -67,8 +66,8 @@
     {
       "institution": "University of Birmingham",
       "url": "https://www.birmingham.ac.uk",
-      "area": "Computer Science w/ Management",
-      "studyType": "BSc. 1st Class",
+      "area": "Computer Science with Management",
+      "studyType": "Bachelor of Science",
       "startDate": "2010-09-01",
       "endDate": "2013-07-01"
     }
@@ -94,23 +93,23 @@
       "keywords": [
         "dbt",
         "PySpark",
-        "kedro",
-        "dagster",
-        "kafka",
+        "Kedro",
+        "Dagster",
+        "Kafka",
         "GX",
-        "pandera",
-        "pytest",
+        "Pandera",
+        "Pytest",
         "Docker"
       ]
     },
     {
-      "name":"CI/CD",
+      "name": "CI/CD",
       "keywords": ["CircleCI", "GitHub Actions"]
     }
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-    "version": "v1.0.0",
-    "theme":"jsonresume-theme-macchiato"
+    "version": "1.0.0",
+    "theme": "jsonresume-theme-macchiato"
   }
 }
