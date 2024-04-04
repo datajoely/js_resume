@@ -22,13 +22,13 @@
       "position": "Principal Technical Product Manager",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/labs",
       "startDate": "2021-01-01",
-      "summary": "Transitioned into a Product role with a focus on creating long-term sustained value from ML. Developed an additional toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on ML development productivity.",
+      "summary": "Transitioned into a Product role with a focus on developer tooling and enabling sustained value from ML. Developed an additional toolkit grounded in discovery and user centricity. Joined the Kedro open source initiative before building my own team focused on other initatives.",
       
       "highlights": [
-        "Assembled and led team of 14 Engineers, PMs and Designers focused on standardisation and driving code quality across a globally distributed portfolio of industry specific ML applications. Formal line manager role, responsible for product vision, staffing and professional development for the whole team.",
-        "Incubated a new product from scratch (working name Alloy, set to open source Q1 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
-        "The practitioner-led roll out of Alloy eliminated the need for dedicated DevOps resources across the portfolio and reduced average monorepo build times by 70%.",
-        "Stewarded the Kedro (8.5K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
+        "Assembled and led team of 14 Engineers, PMs and Designers focused on driving software engineering excellence across a globally distributed portfolio of industry specific ML applications. Formal line manager role, responsible for product vision, staffing and professional development for the whole team.",
+        "Currently focused on a novel 'ML Models as a Service' platform enabling our teams to serve clients via a SaaS model. Responsible for stewarding the security sign-off, go to market collateral and build.",
+        "Incubated a new developer-tooling product from scratch (working name Alloy, set to open source Q2 2024) which abstracts the complexities of Python packaging, CI/CD and TDD specifically for Data Scientist and Data Engineer personas.",
+        "Stewarded the Kedro (9.3K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
         "Led significant research work-steam focused on rethinking Kedro's configuration management mechanism whilst balancing imperative flexibility and declarative readability.",
         "Responsible for driving product telemetry privacy and technical best practices across the organisation. Introduced unified approach for CLI Python apps and consent workflow signed off by internal Legal.",
         "Responsible for convening monthly community events across Product, Engineering global communities, organising quarterly Demo Days and Hackathons."
