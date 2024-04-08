@@ -24,11 +24,11 @@
       "startDate": "2021-01-01",
       "summary": "Transitioned into a Product role with a focus on developer tooling and enabling sustained value from Machine Learning. Developed an additional toolkit grounded in discovery and user centricity.",
       "highlights": [
-        "Led a team of 14 Engineers, PMs, and Designers to drive software engineering excellence across a globally distributed portfolio of industry-specific ML applications. Managed product vision, staffing, and professional development for the whole team.",
-        "Currently focused on a novel 'ML Models as a Service' platform enabling teams to serve clients via a SaaS model. ",
+        "Led multiple concurrent teams comprised of Engineers, PMs, and Designers to drive software engineering excellence across a globally distributed portfolio of industry-specific ML applications. Managed product vision, staffing, and professional development for the whole team.",
+        "Currently focused on a novel 'ML Models as a Service' platform enabling teams to serve clients via a multi-tennant enterprise grade SaaS solution. ",
         "Incubated a new developer-tooling product named Alloy, simplifying Python packaging, CI/CD, and TDD for Data Scientist and Data Engineer personas.",
         "Stewarded the Kedro (9.3K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
-        "Led research focused on rethinking Kedro's configuration management mechanism for improved flexibility and readability.",
+        "Led research focused on rethinking Kedro's dynamic configuration management mechanism for improved flexibility and readability.",
         "Drove product telemetry privacy and technical best practices across the organization.",
         "Organized monthly community events and quarterly Demo Days to foster collaboration and innovation."
       ]
@@ -40,11 +40,10 @@
       "url": "https://www.mckinsey.com/capabilities/quantumblack/",
       "startDate": "2017-02-28",
       "endDate": "2020-12-31",
-      "summary": "Consultant Data Engineer delivering ML use-cases for clients across pharmaceutical, manufacturing, insurance, and motorsport contexts. Led the development of RL-powered race strategy software for a winning Formula E team. Deployed solutions for vaccine manufacturing and patient journey tracking.",
+      "summary": "Consultant Data Engineer delivering ML use-cases for clients across pharmaceutical, manufacturing, insurance, and motorsport contexts.",
       "highlights": [
         "Developed Reinforcement Learning powered race strategy software for a Formula E team, optimizing energy deployment and drive mode strategy. Joined Phase 1 of project as the lead Data Engineer, led Phase 2 as Product Manager.",
-        "Deployed solutions for vaccine manufacturing and patient journey tracking, collaborating with clients and medical professionals.",
-        "Built data ingestion and feature engineering pipelines for innovative healthcare projects."
+        "Developed feature engineering pipelines for numerous machine learning projects, in contexts such as vaccine production lines and diabetes drug patient journey tracking. Worked in close collaboration with clients, data science and medical professionals."
       ]
     },
     {
