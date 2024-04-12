@@ -24,11 +24,10 @@
       "startDate": "2021-01-01",
       "summary": "Transitioned into a Product role specializing in developer tooling and the delivery of sustained value from Machine Learning. Developed an additional toolkit grounded in discovery with a focus on Data Scientist and Data Engineer personas. Stewarded existing initiatives as well as incubated multiple customer-facing products end-to-end.",
       "highlights": [
-        "Developed a novel 'ML Models as a Service' platform enabling internal teams to serve clients via a multi-tenant enterprise-grade SaaS solution. A small team started in August 2023 has now developed a security-vetted solution that is targeting 2 initial production deployments of pricing models by the close of Q2 2024.",
+        "Developed a novel 'ML Models as a Service' platform enabling internal teams to serve clients via a multi-tenant enterprise-grade SaaS solution. A small team started in August 2023 has now developed a security-vetted solution that is targeting 2 initial production deployments by the close of Q2 2024.",
         "Led multiple concurrent teams comprised of Engineers, PMs, and Designers to drive software engineering excellence across a globally distributed portfolio of industry-specific ML applications. Managed product vision, staffing, and professional development for the whole team.",
-        "Incubated a new developer-tooling product named Alloy, simplifying Python packaging, CI/CD, and Testing practices for Data Scientist and Data Engineer personas.",
-        "Stewarded the Kedro (9.3K Stars) open-source project through the admissions process to the Linux Foundation for AI & Data.",
-        "Led research focused on rethinking Kedro's dynamic configuration management mechanism for improved flexibility and readability.",
+        "Incubated a new developer-tooling product named Alloy, simplifying Python packaging, CI/CD, and Testing practices for Data Scientist and Data Engineer personas. Eventually gained 100% internal product-team adoption without top-down mandate.",
+        "Stewarded the Kedro (9.3K Stars) open-source project through the admissions process to the Linux Foundation for AI & Data. Led research focused on rethinking Kedro's dynamic configuration management mechanism which dramatically improved flexibility, readability and power-user adoption.",
         "Drove product telemetry privacy and technical best practices across the organization.",
         "Led developer community events and quarterly Demo Days to foster collaboration and innovation."
       ]
@@ -76,6 +75,35 @@
     {
       "title": "Best Final Year Student",
       "awarder": "University of Birmingham, School of Computer Science"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Python",
+        "SQL",
+        "Cypher",
+        "Java"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": [
+        "dbt",
+        "PySpark",
+        "Kedro",
+        "Dagster",
+        "Kafka",
+        "GX",
+        "Pandera",
+        "Pytest",
+        "Docker"
+      ]
+    },
+    {
+      "name": "CI/CD",
+      "keywords": ["CircleCI", "GitHub Actions"]
     }
   ],
   "meta": {
