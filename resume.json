@@ -22,15 +22,15 @@
       "position": "Principal Technical Product Manager",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/labs",
       "startDate": "2021-01-01",
-      "summary": "Transitioned into a Product role specializing in developer tooling and the delivery of sustained value from Machine Learning. Developed an additional toolkit grounded in discovery with a focus on Data Scientist and Data Engineer personas. Stewarded existing initiatives as well as incubated multiple customer facing products end to end.",
+      "summary": "Transitioned into a Product role specializing in developer tooling and the delivery of sustained value from Machine Learning. Developed an additional toolkit grounded in discovery with a focus on Data Scientist and Data Engineer personas. Stewarded existing initiatives as well as incubated multiple customer-facing products end-to-end.",
       "highlights": [
-        "Developed novel 'ML Models as a Service' platform enabling internal teams to serve clients via a multi-tennant enterprise grade SaaS solution. A small team started in August 2023 has now developed a security-vetted solution that is targeting 2 initial production deployments of pricing models by the close of Q2 2024.",
+        "Developed a novel 'ML Models as a Service' platform enabling internal teams to serve clients via a multi-tenant enterprise-grade SaaS solution. A small team started in August 2023 has now developed a security-vetted solution that is targeting 2 initial production deployments of pricing models by the close of Q2 2024.",
         "Led multiple concurrent teams comprised of Engineers, PMs, and Designers to drive software engineering excellence across a globally distributed portfolio of industry-specific ML applications. Managed product vision, staffing, and professional development for the whole team.",
         "Incubated a new developer-tooling product named Alloy, simplifying Python packaging, CI/CD, and Testing practices for Data Scientist and Data Engineer personas.",
-        "Stewarded the Kedro (9.3K Stars) open source project through the admissions process to the Linux Foundation for AI & Data.",
+        "Stewarded the Kedro (9.3K Stars) open-source project through the admissions process to the Linux Foundation for AI & Data.",
         "Led research focused on rethinking Kedro's dynamic configuration management mechanism for improved flexibility and readability.",
         "Drove product telemetry privacy and technical best practices across the organization.",
-        "Lead developer community community events and quarterly Demo Days to foster collaboration and innovation."
+        "Led developer community events and quarterly Demo Days to foster collaboration and innovation."
       ]
     },
     {
@@ -40,11 +40,11 @@
       "url": "https://www.mckinsey.com/capabilities/quantumblack/",
       "startDate": "2017-02-28",
       "endDate": "2020-12-31",
-      "summary": "Forward-deployed Data Engineer delivering bespoke ML use-cases for clients across pharmaceutical, manufacturing, insurance, and motorsport contexts. Developed production grade pipelines in Python, Spark, SQL or whatever the client tech stack required. Progressed from individual contributor to team lead, before seeking out a new Product focused direction.",
+      "summary": "Forward-deployed Data Engineer delivering bespoke ML use-cases for clients across pharmaceutical, manufacturing, insurance, and motorsport contexts. Developed production-grade pipelines in Python, Spark, SQL or whatever the client tech stack required. Progressed from individual contributor to team lead before seeking out a new Product-focused direction.",
       "highlights": [
-        "Developed Reinforcement Learning powered race strategy software for a race-winning Formula E team, optimizing energy deployment and drive mode strategy. Joined Phase 1 as the lead Data Engineer, led Phase 2 as overall Product Manager. Integrated streaming race timing data with simulation outputs to build decision support system.",
-        "Developed feature engineering strategies and pipelines for numerous machine learning projects across contexts like vaccine production, diabetes drug patient journey tracking and motor insurance pricing.", 
-        "Worked across multi-disciplinary teams in close collaboration with clients counterparts, data science and subject matter experts such as medical professionals."
+        "Developed Reinforcement Learning-powered race strategy software for a race-winning Formula E team, optimizing energy deployment and drive mode strategy. Joined Phase 1 as the lead Data Engineer, led Phase 2 as overall Product Manager. Integrated streaming race timing data with simulation outputs to build a decision support system.",
+        "Developed feature engineering strategies and pipelines for numerous machine learning projects across contexts like vaccine production, diabetes drug patient journey tracking, and motor insurance pricing.",
+        "Worked across multi-disciplinary teams in close collaboration with client counterparts, data science, and subject matter experts such as medical professionals."
       ]
     },
     {
@@ -54,10 +54,10 @@
       "url": "https://www.pwc.co.uk/services/forensics.html",
       "startDate": "2013-09-01",
       "endDate": "2017-02-17",
-      "summary": "Operated data-driven investigations focusing on fraud, disputes, and trade surveillance. Developed analytical toolkits using SQL and Python across  mostly financial service contexts.", 
+      "summary": "Operated data-driven investigations focusing on fraud, disputes, and trade surveillance. Developed analytical toolkits using SQL and Python across mostly financial service contexts.",
       "highlights": [
         "Resolved creditor disputes and managed major decommissioning projects in the aftermath of the Lehman Brothers bankruptcy.",
-        "Analyzed Bloomberg communications related to the LIBOR frontrunning scandal.",
+        "Analyzed Bloomberg communications related to the LIBOR front-running scandal.",
         "Led the development of graph database-powered market surveillance tooling."
       ]
     }
