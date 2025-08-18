@@ -2,7 +2,7 @@
   "$schema": "https://jsonresume.org/schema",
   "basics": {
     "name": "Joel Schwarzmann",
-    "label": "Product & Engineering Leadership | Data Platforms | Developer Experience",
+    "label": "Product & Engineering Leadership | Data Platforms | Developer Tooling",
     "email": "joel.l.schw@gmail.com",
     "location": { 
       "city": "London",
@@ -16,7 +16,7 @@
         "url": "https://github.com/datajoely"
       }
     ],
-    "summary": "Builder of data and ML platforms, as well as developer tooling. Combines hands-on engineering with product leadership to deliver secure, interoperable systems. Skilled at translating complex technical concepts for diverse audiences. Passionate about creating platforms and products users love."
+    "summary": "Builder of developer tooling and data / AI platforms. Combines hands-on engineering with product leadership to deliver secure, interoperable systems. Skilled at translating complex technical concepts for diverse audiences. Passionate about creating platforms and products users love."
   },
   "work": [
     {
