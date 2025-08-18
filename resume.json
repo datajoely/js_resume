@@ -16,7 +16,7 @@
         "url": "https://github.com/datajoely"
       }
     ],
-    "summary": "Builder of data & ML platforms and developer tooling. Combines hands-on engineering with product leadership to ship secure, interoperable systems. Translates complex technical concepts for audiences across the business; passionate about developing platforms and products users love to use."
+    "summary": "Builder of data and ML platforms, as well as developer tooling. Combines hands-on engineering with product leadership to deliver secure, interoperable systems. Skilled at translating complex technical concepts for diverse audiences. Passionate about creating platforms and products users love."
   },
   "work": [
     {
@@ -25,24 +25,23 @@
       "position": "Director of Platform",
       "url": "https://www.aneira.health",
       "startDate": "2024-09-01",
-      "summary": "Spearheading GCP-native data platform serving women with personalised, clinically-validated healthcare insights directly impacting patient outcomes.",
+      "summary": "Leading development of a GCP-native data platform providing women with personalised, clinically validated healthcare insights that directly improve patient outcomes. Simultaneously building a world-class multimodal research platform integrating de-identified EHR, genomics, DICOM, and wearable data.",
       "highlights": [
-        "Delivered production platform integrating EHR, genomics, and wearable data streams.",
+        "Delivered a production grade data platform integrating EHR, genomics, and wearable data streams.",
         "Established FHIR-compliant architecture with interoperability as a core feature, including an MCP layer to enable secure LLM use cases (e.g., triage, coaching).",
-        "Laid the groundwork for exposing our research platform to our first external pharmaceutical partner.",
-        "led product discovery for exposing our research platform to our first external pharmaceutical partner.",
+        "Directed product discovery and initial development to expose the research platform to the first external pharmaceutical customer.",
         "Operated in a seed-stage context, spanning product, platform, and engineering execution."
       ]
     },
     {
-      "company": "Population Health Partners",
+      "company": "Population Health Partners (incubator of Aneira Health among other companies)",
       "location": "London, United Kingdom",
-      "position": "Director of Platform (Advisor)",
+      "position": "Advisor",
       "url": "http://populationhp.com",
       "startDate": "2024-09-01",
       "summary": "Strategic and technical advisor across portfolio companies on data, ML, and AI platforms.",
       "highlights": [
-        "Guided ML/AI capability development, engineering standards and scalable data infrastructure across biotech, pharmaceuticals, and healthcare portfolio companies.",
+        "Guided ML/AI capability development, engineering standards, and scalable data infrastructure across biotech, pharmaceutical, and healthcare portfolio companies.",
         "Led vendor assessments and selections (e.g., Vanta, Dagster, Linear, Miro, Posthog)."
       ]
     },
@@ -55,12 +54,12 @@
       "endDate": "2024-08-31",
       "summary": "Product leader for developer tooling and durable ML delivery; stewarded open source and incubated multiple products end-to-end.",
       "highlights": [
-        "Stewarded Kedro (10.5k ★) through LF AI & Data incubation to graduation, Led a customer-driven research initiative that identified and addressed key pain points in Kedro's configuration experience, resulting in a comprehensive overhaul that significantly reduced configuration overhead; continue to serve on the Kedro Technical Steering Committee (TSC).",
+        "Stewarded Kedro (10.5k ★) through LF AI & Data incubation to graduation. Led a customer-driven research initiative that identified and addressed key pain points in Kedro's configuration experience, resulting in a comprehensive overhaul that significantly reduced configuration overhead; continue to serve on the Kedro Technical Steering Committee (TSC).",
         "Incubated an internal multi-tenant 'ML Models as a Service' platform from Aug 2023 to initial client deployments in 2024.",
-        "Created Alloy, an internal build tool to compose Kedro projects from reusable building blocks; simplified packaging, CI/CD, and testing and drove org-wide adoption.",
-        "Led cross-functional teams to drive consistency and raise engineering excellence across a global ML cross-industry product portfolio.",
+        "Created Alloy, an internal build tool to compose Kedro projects from reusable building blocks; simplified packaging, CI/CD, and testing, driving organisation-wide adoption.",
+        "Directed cross-functional teams to drive consistency and raise engineering excellence across a global ML cross-industry product portfolio.",
         "Defined privacy-preserving product telemetry standards and rollout practices.",
-        "Ran developer community events and Demo Days to drive reuse and collaboration."
+        "Organised developer community events and Demo Days to drive reuse and collaboration."
       ]
     },
     {
@@ -83,10 +82,10 @@
       "url": "https://www.pwc.co.uk/services/forensics.html",
       "startDate": "2013-09-01",
       "endDate": "2017-02-17",
-      "summary": "Delivered data-driven investigations across fraud, disputes, and trade surveillance; built SQL/Python toolkits.",
+      "summary": "Delivered data-driven investigations into fraud, disputes, and trade surveillance; developed SQL/Python toolkits.",
       "highlights": [
         "Analysed Bloomberg communications related to LIBOR front-running.",
-        "Resolved creditor disputes and managed decommissioning projects post-Lehman Brothers bankruptcy.",
+        "Resolved creditor disputes and managed decommissioning projects following the Lehman Brothers bankruptcy.",
         "Led development of graph-database-powered market surveillance tooling."
       ]
     }
@@ -95,7 +94,7 @@
     {
       "name": "Kedro (LF AI & Data)",
       "url": "https://github.com/kedro-org/kedro",
-      "summary": "Kedro is a toolbox for production-ready data science. It uses software engineering best practices to help you create data engineering and data science pipelines that are reproducible, maintainable, and modular."
+      "summary": "Kedro is a toolbox for production-ready data science. It uses software engineering best practices to help create data engineering and data science pipelines that are reproducible, maintainable, and modular."
     }
   ],
   "education": [
