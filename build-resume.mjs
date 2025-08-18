@@ -37,155 +37,222 @@ function generateHTML(data) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Roman:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     
     html {
-      font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", Times, serif;
+      font-family: 'LMRoman10', serif;
       background: #fff;
-      font-size: 10px;
+      font-size: 14px;
+      line-height: 1.4;
     }
     
     body { 
-      font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", Times, serif;
-      margin: 40px; 
-      line-height: 1.5; 
+      font-family: 'LMRoman10', serif;
+      margin: 0 auto; 
+      line-height: 1.4; 
       color: #000; 
-      max-width: 800px;
-      font-size: 1.4rem;
-      padding: 0;
+      max-width: 700px;
+      font-size: 1rem;
+      padding: 2rem;
+      background: #fff;
     }
+    
     .header { 
-      border-bottom: 1px solid #000; 
-      padding-bottom: 15px; 
-      margin-bottom: 25px; 
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #000;
+      padding-bottom: 1rem;
     }
+    
     .name { 
-      font-size: 2.4rem; 
+      font-size: 2.5rem; 
       font-weight: bold; 
-      margin: 0; 
+      margin: 0 0 0.5rem 0; 
       color: #000;
       text-align: center;
-      margin-bottom: 8px;
+      font-family: 'LMRoman10', serif;
+      letter-spacing: 0.02em;
     }
+    
     .label { 
-      font-size: 1.3rem; 
+      font-size: 1.1rem; 
       color: #000; 
-      margin: 2px 0; 
+      margin: 0 0 1rem 0; 
       font-weight: normal;
       font-style: italic;
       text-align: center;
+      font-family: 'LMRoman10', serif;
     }
+    
     .contact { 
-      margin: 8px 0; 
-      font-size: 1.1rem;
+      margin: 0.5rem 0; 
+      font-size: 0.9rem;
       text-align: center;
-      line-height: 1.3rem;
+      line-height: 1.3;
+      font-family: 'LMRoman10', serif;
     }
+    
     .contact a { 
       color: #000; 
       text-decoration: none; 
     }
+    
     .contact a:hover { 
       text-decoration: underline; 
     }
+    
     .contact-item {
       display: inline-block;
-      margin: 0 6px;
+      margin: 0 0.5rem;
     }
+    
     .contact i {
-      margin-right: 3px;
-      font-size: 0.9rem;
+      margin-right: 0.25rem;
+      font-size: 0.8rem;
     }
-    p {
-      padding: 0;
-      margin: 0;
+    
+    .summary {
+      text-align: center;
+      margin: 1rem 0 0 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: 'LMRoman10', serif;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
+    
+    .section { 
+      margin: 1.5rem 0; 
+    }
+    
+    .section h2 { 
+      font-size: 1.3rem; 
+      border-bottom: 1px solid #666; 
+      padding-bottom: 0.25rem; 
+      margin-bottom: 1rem; 
+      color: #000;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      text-align: left;
+      font-family: 'LMRoman10', serif;
+      letter-spacing: 0.01em;
+    }
+    
+    .work-item { 
+      margin-bottom: 1.5rem; 
+      text-align: left;
+    }
+    
+    .work-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+    
+    .work-title {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #000;
+      font-family: 'LMRoman10', serif;
+    }
+    
+    .work-date {
+      color: #000; 
+      font-size: 0.9rem; 
+      font-style: italic;
+      font-family: 'LMRoman10', serif;
+      white-space: nowrap;
+    }
+    
+    .company { 
+      font-weight: normal; 
+      font-size: 1rem; 
+      color: #000;
+      font-style: italic;
+      font-family: 'LMRoman10', serif;
+      margin-bottom: 0.5rem;
+    }
+    
+    .work-summary { 
+      margin: 0.5rem 0; 
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: 'LMRoman10', serif;
+    }
+    
+    .highlights { 
+      margin: 0.5rem 0; 
+      padding-left: 1.5rem; 
+      list-style-type: disc;
+    }
+    
+    .highlights li { 
+      margin: 0.25rem 0; 
+      line-height: 1.4;
+      font-size: 1rem;
+      font-family: 'LMRoman10', serif;
+    }
+    
+    .skills-category { 
+      margin-bottom: 0.75rem; 
+      text-align: left;
+    }
+    
+    .skills-name { 
+      font-weight: bold; 
+      color: #000;
+      font-family: 'LMRoman10', serif;
+    }
+    
+    .skills-keywords { 
+      margin-left: 0.5rem; 
+      color: #000; 
+      font-family: 'LMRoman10', serif;
+    }
+    
+    /* Ensure proper LaTeX-style typography */
     p, li {
-      font-size: 1.4rem;
-      line-height: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: 'LMRoman10', serif;
     }
+    
     a {
       text-decoration: none;
+      color: #000;
     }
+    
     ul {
       margin: 0;
       padding: 0;
     }
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-    .section { 
-      margin: 20px 0; 
-    }
-    .section h2 { 
-      font-size: 1.65rem; 
-      border-bottom: 1px solid #000; 
-      padding-bottom: 2px; 
-      margin-bottom: 8px; 
-      color: #000;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    .summary {
-      text-align: center;
-      margin: 10px 0;
-      font-size: 1.4rem;
-      line-height: 1.5rem;
-    }
-    .work-item { 
-      margin-bottom: 18px; 
-      border-left: none;
-      padding-left: 0;
-    }
-    .company { 
-      font-weight: normal; 
-      font-size: 1.4rem; 
-      color: #000;
-      font-style: italic;
-    }
-    .position { 
-      font-style: normal; 
-      color: #000; 
-      margin: 0;
-      display: inline;
-      font-size: 1.4rem;
-    }
-    .date { 
-      color: #000; 
-      font-size: 1.3rem; 
-      margin: 0;
-      float: right;
-      font-style: italic;
-    }
-    .work-summary { 
-      margin: 4px 0; 
-      clear: both;
-      font-size: 1.4rem;
-      line-height: 1.5rem;
-    }
-    .highlights { 
-      margin: 4px 0; 
-      padding-left: 20px; 
-      list-style-type: disc;
-    }
-    .highlights li { 
-      margin: 2px 0; 
-      line-height: 1.5rem;
-      font-size: 1.4rem;
-    }
-    .skills-category { 
-      margin-bottom: 6px; 
-    }
-    .skills-name { 
-      font-weight: bold; 
-      color: #000;
-    }
-    .skills-keywords { 
-      margin-left: 0; 
-      color: #000; 
+    
+    /* Print and PDF optimization */
+    @media print {
+      body {
+        margin: 0;
+        padding: 1rem;
+        max-width: none;
+        font-size: 12px;
+      }
+      
+      /* Just prevent really awkward breaks */
+      .section h2 {
+        page-break-after: avoid;
+      }
+      
+      .work-header {
+        page-break-after: avoid;
+      }
     }
   </style>
 </head>
@@ -208,8 +275,10 @@ function generateHTML(data) {
     <h2>Experience</h2>
     \${data.work.map(job => \`
       <div class="work-item">
-        <div class="date">\${job.startDate} - \${job.endDate || 'Present'}</div>
-        <div><strong class="position">\${job.position}</strong></div>
+        <div class="work-header">
+          <div class="work-title">\${job.position}</div>
+          <div class="work-date">\${job.startDate} - \${job.endDate || 'Present'}</div>
+        </div>
         <div class="company">\${job.company}</div>
         <div class="work-summary">\${job.summary}</div>
         \${job.highlights ? \`<ul class="highlights">\${job.highlights.map(h => \`<li>\${h}</li>\`).join('')}</ul>\` : ''}
@@ -222,9 +291,11 @@ function generateHTML(data) {
     <h2>Education</h2>
     \${data.education.map(edu => \`
       <div class="work-item">
+        <div class="work-header">
+          <div class="work-title">\${edu.studyType} in \${edu.area}</div>
+          <div class="work-date">\${edu.startDate} - \${edu.endDate}</div>
+        </div>
         <div class="company">\${edu.institution}</div>
-        <div class="position">\${edu.studyType} in \${edu.area}</div>
-        <div class="date">\${edu.startDate} - \${edu.endDate}</div>
         \${edu.score ? \`<div class="work-summary">Grade: \${edu.score}</div>\` : ''}
       </div>
     \`).join('')}
@@ -248,7 +319,9 @@ function generateHTML(data) {
     <h2>Projects</h2>
     \${data.projects.map(project => \`
       <div class="work-item">
-        <div class="company"><a href="\${project.url}">\${project.name}</a></div>
+        <div class="work-header">
+          <div class="work-title"><a href="\${project.url}">\${project.name}</a></div>
+        </div>
         <div class="work-summary">\${project.summary}</div>
       </div>
     \`).join('')}
@@ -260,9 +333,11 @@ function generateHTML(data) {
     <h2>Publications</h2>
     \${data.publications.map(pub => \`
       <div class="work-item">
-        <div class="company"><a href="\${pub.url}">\${pub.name}</a></div>
-        <div class="position">\${pub.publisher}</div>
-        <div class="date">\${pub.releaseDate}</div>
+        <div class="work-header">
+          <div class="work-title"><a href="\${pub.url}">\${pub.name}</a></div>
+          <div class="work-date">\${pub.releaseDate}</div>
+        </div>
+        <div class="company">\${pub.publisher}</div>
       </div>
     \`).join('')}
   </div>
@@ -273,8 +348,10 @@ function generateHTML(data) {
     <h2>Awards</h2>
     \${data.awards.map(award => \`
       <div class="work-item">
-        <div class="company">\${award.title}</div>
-        <div class="position">\${award.awarder}</div>
+        <div class="work-header">
+          <div class="work-title">\${award.title}</div>
+        </div>
+        <div class="company">\${award.awarder}</div>
       </div>
     \`).join('')}
   </div>
