@@ -1,2 +1,5 @@
 resume.pdf
 index.html
+bun.lock
+node_modules
+package-lock.json

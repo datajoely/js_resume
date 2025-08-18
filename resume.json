@@ -2,9 +2,11 @@
   "$schema": "https://jsonresume.org/schema",
   "basics": {
     "name": "Joel Schwarzmann",
+    "label": "Product & Engineering Leadership | Data Platforms | Developer Experience",
     "email": "joel.l.schw@gmail.com",
-    "location": {
+    "location": { 
       "city": "London",
+      "region": "England",
       "countryCode": "GB"
     },
     "profiles": [
@@ -14,37 +16,64 @@
         "url": "https://github.com/datajoely"
       }
     ],
-    "summary": "At QuantumBlack, he blends lived technical experience in the ML space with a product toolkit. A generalist who can be relied upon to efficiently deliver concise research-backed solutions and someone who can effectively bridge technical concepts with colleagues, stakeholders, and customers. They have a passion for building tools developers love to use and staying on top of the latest innovations in the broader data space."
+    "summary": "Builder of data & ML platforms and developer tooling. Combines hands-on engineering with product leadership to ship secure, interoperable systems. Translates complex technical concepts for audiences across the business; passionate about developing platforms and products users love to use."
   },
   "work": [
+    {
+      "company": "Aneira Health",
+      "location": "London, United Kingdom",
+      "position": "Director of Platform",
+      "url": "https://www.aneira.health",
+      "startDate": "2024-09-01",
+      "summary": "Spearheading GCP-native data platform serving women with personalised, clinically-validated healthcare insights directly impacting patient outcomes.",
+      "highlights": [
+        "Delivered production platform integrating EHR, genomics, and wearable data streams.",
+        "Established FHIR-compliant architecture with interoperability as a core feature, including an MCP layer to enable secure LLM use cases (e.g., triage, coaching).",
+        "Laid the groundwork for exposing our research platform to our first external pharmaceutical partner.",
+        "led product discovery for exposing our research platform to our first external pharmaceutical partner.",
+        "Operated in a seed-stage context, spanning product, platform, and engineering execution."
+      ]
+    },
+    {
+      "company": "Population Health Partners",
+      "location": "London, United Kingdom",
+      "position": "Director of Platform (Advisor)",
+      "url": "http://populationhp.com",
+      "startDate": "2024-09-01",
+      "summary": "Strategic and technical advisor across portfolio companies on data, ML, and AI platforms.",
+      "highlights": [
+        "Guided ML/AI capability development, engineering standards and scalable data infrastructure across biotech, pharmaceuticals, and healthcare portfolio companies.",
+        "Led vendor assessments and selections (e.g., Vanta, Dagster, Linear, Miro, Posthog)."
+      ]
+    },
     {
       "company": "QuantumBlack Labs (a McKinsey company)",
       "location": "London, United Kingdom",
       "position": "Principal Technical Product Manager",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/labs",
       "startDate": "2021-01-01",
-      "summary": "Product role specializing in developer tooling and the delivery of sustained value from Machine Learning. Developed an additional toolkit grounded in discovery with a focus on Data Scientist and Data Engineer personas. Stewarded existing initiatives as well as incubated multiple customer-facing products end-to-end.",
+      "endDate": "2024-08-31",
+      "summary": "Product leader for developer tooling and durable ML delivery; stewarded open source and incubated multiple products end-to-end.",
       "highlights": [
-        "Developed a novel 'ML Models as a Service' platform enabling internal teams to serve clients via a multi-tenant enterprise-grade SaaS solution. A small team started in August 2023 has now developed a security-vetted solution that is targeting the first two customer deployments by the close of Q2 2024.",
-        "Led multiple concurrent teams comprised of Engineers, PMs, and Designers to drive software engineering excellence across a globally distributed portfolio of industry-specific ML applications. Managed product vision, staffing, and professional development for the whole team.",
-        "Incubated a new developer-tooling product named Alloy, simplifying Python packaging, CI/CD, and Testing practices for Data Scientists and Data Engineers. This focused on acute pain points experience across the company and eventually gained 100% internal product-team adoption without a top-down mandate.",
-        "Stewarded the Kedro (9.3K Stars) open-source project through the admissions process to the Linux Foundation for AI & Data. Led research focused on rethinking Kedro's dynamic configuration management mechanism, which dramatically improved flexibility, readability, and power-user adoption. Remain a member of the Kedro Technical Steering Committee which is now represented by 4 different companies.",
-        "Drove product telemetry privacy and technical best practices across the organization.",
-        "Led developer community events and quarterly Demo Days to foster collaboration and innovation."
+        "Stewarded Kedro (10.5k ★) through LF AI & Data incubation to graduation, Led a customer-driven research initiative that identified and addressed key pain points in Kedro's configuration experience, resulting in a comprehensive overhaul that significantly reduced configuration overhead; continue to serve on the Kedro Technical Steering Committee (TSC).",
+        "Incubated an internal multi-tenant 'ML Models as a Service' platform from Aug 2023 to initial client deployments in 2024.",
+        "Created Alloy, an internal build tool to compose Kedro projects from reusable building blocks; simplified packaging, CI/CD, and testing and drove org-wide adoption.",
+        "Led cross-functional teams to drive consistency and raise engineering excellence across a global ML cross-industry product portfolio.",
+        "Defined privacy-preserving product telemetry standards and rollout practices.",
+        "Ran developer community events and Demo Days to drive reuse and collaboration."
       ]
     },
     {
       "company": "QuantumBlack (a McKinsey company)",
       "location": "London, United Kingdom",
-      "position": "Principal (Jr.) Data Engineer",
+      "position": "Senior Data Engineer",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/",
       "startDate": "2017-02-28",
       "endDate": "2020-12-31",
-      "summary": "Forward-deployed Data Engineer delivering bespoke ML use-cases for clients across pharmaceutical, manufacturing, insurance, and motorsport contexts. Developed production-grade pipelines in Python, Spark, SQL, or client-preferred tech stack. Progressed from individual contributor to team lead before seeking out a new Product-focused direction.",
+      "summary": "Forward-deployed Data Engineer delivering production ML across pharma, manufacturing, insurance, and motorsport.",
       "highlights": [
-        "Developed Reinforcement Learning-powered race strategy software for a race-winning Formula E team, optimizing energy deployment and drive mode strategy. Joined Phase 1 as the lead Data Engineer, led Phase 2 as overall Product Manager. Integrated streaming race timing data with simulation outputs to build a decision support system.",
-        "Developed feature engineering strategies and pipelines for numerous machine learning projects across contexts like vaccine production, diabetes drug patient journey tracking, and motor insurance pricing.",
-        "Worked across multi-disciplinary teams in close collaboration with client counterparts, data scientists, and subject matter experts including medical professionals and chemical engineers."
+        "Built reinforcement-learning-driven race strategy software for a championship-winning Formula E team; led Phase 1 (Engineering) and Phase 2 (Product).",
+        "Designed feature engineering and deployment pipelines across vaccine production, diabetes patient journeys, and motor insurance pricing."
       ]
     },
     {
@@ -54,12 +83,19 @@
       "url": "https://www.pwc.co.uk/services/forensics.html",
       "startDate": "2013-09-01",
       "endDate": "2017-02-17",
-      "summary": "Operated data-driven investigations focusing on fraud, disputes, and trade surveillance. Developed analytical toolkits using SQL and Python across mostly financial service contexts.",
+      "summary": "Delivered data-driven investigations across fraud, disputes, and trade surveillance; built SQL/Python toolkits.",
       "highlights": [
-        "Resolved creditor disputes and managed major decommissioning projects in the aftermath of the Lehman Brothers bankruptcy.",
-        "Analyzed Bloomberg communications related to the LIBOR front-running scandal.",
-        "Led the development of graph database-powered market surveillance tooling."
+        "Analysed Bloomberg communications related to LIBOR front-running.",
+        "Resolved creditor disputes and managed decommissioning projects post-Lehman Brothers bankruptcy.",
+        "Led development of graph-database-powered market surveillance tooling."
       ]
+    }
+  ],
+  "projects": [ 
+    {
+      "name": "Kedro (LF AI & Data)",
+      "url": "https://github.com/kedro-org/kedro",
+      "summary": "Kedro is a toolbox for production-ready data science. It uses software engineering best practices to help you create data engineering and data science pipelines that are reproducible, maintainable, and modular."
     }
   ],
   "education": [
@@ -67,10 +103,10 @@
       "institution": "University of Birmingham",
       "url": "https://www.birmingham.ac.uk",
       "area": "Computer Science with Management",
-      "studyType": "Bachelor of Science",
+      "studyType": "BSc",
       "startDate": "2010-09-01",
       "endDate": "2013-07-01",
-      "gpa": "1st Class (Hons)"
+      "score": "First Class (Hons)"
     }
   ],
   "awards": [
@@ -82,36 +118,29 @@
   "skills": [
     {
       "name": "Languages",
-      "keywords": [
-        "Python",
-        "SQL",
-        "Cypher",
-        "Java"
-      ]
+      "level": "Advanced",
+      "keywords": ["Python", "SQL"]
     },
     {
       "name": "Frameworks",
-      "keywords": [
-        "dbt",
-        "PySpark",
-        "Kedro",
-        "Ibis",
-        "Dagster",
-        "Kafka",
-        "GX",
-        "Pandera",
-        "Pytest",
-        "Docker"
-      ]
+      "keywords": ["Dagster", "Airflow", "dbt", "sqlmesh", "PySpark", "Kedro", "Ibis", "Kafka", "Pandera", "FastMCP", "FastAPI"]
     },
     {
-      "name": "CI/CD",
-      "keywords": ["CircleCI", "GitHub Actions"]
+      "name": "Product & Practices",
+      "keywords": ["Product Management", "Platform Strategy", "MLOps", "Telemetry & Privacy", "DevEx", "CI/CD", "LLMs", "Testing"]
+    }
+  ],
+  "publications": [
+    {
+      "name": "Reasoning Over Pre-training: Evaluating LLM Performance and Augmentation in Women's Health",
+      "publisher": "medRxiv",
+      "releaseDate": "2025-05-23",
+      "url": "https://www.medrxiv.org/content/10.1101/2025.05.22.25328162v1"
     }
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "1.0.0",
-    "theme": "jsonresume-theme-macchiato"
+    "theme": "@jsonresume/jsonresume-theme-professional"
   }
 }
