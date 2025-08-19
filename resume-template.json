@@ -1,0 +1,96 @@
+{
+  "$schema": "https://jsonresume.org/schema",
+  "basics": {
+    "name": "Your Full Name",
+    "label": "Your Professional Title | Key Skills | Focus Areas",
+    "email": "your.email@example.com",
+    "phone": "+1-555-555-5555",
+    "location": {
+      "city": "Your City",
+      "region": "Your State/Region",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "your-linkedin-username",
+        "url": "https://linkedin.com/in/your-linkedin-username"
+      },
+      {
+        "network": "GitHub",
+        "username": "your-github-username",
+        "url": "https://github.com/your-github-username"
+      }
+    ],
+    "summary": "A compelling summary of your professional background, key achievements, and what makes you unique. Focus on your value proposition and what you bring to the table."
+  },
+  "work": [
+    {
+      "company": "Company Name",
+      "location": "City, State/Country",
+      "position": "Your Job Title",
+      "url": "https://company-website.com",
+      "startDate": "2024-01-01",
+      "endDate": "Present",
+      "summary": "Brief description of your role and key responsibilities. What did you accomplish in this position?",
+      "highlights": [
+        "Key achievement or responsibility 1",
+        "Key achievement or responsibility 2",
+        "Key achievement or responsibility 3"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Name",
+      "url": "https://project-url.com",
+      "summary": "Description of the project, your role, technologies used, and outcomes achieved."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University Name",
+      "url": "https://university-website.edu",
+      "area": "Your Degree/Major",
+      "studyType": "BS/BA/MS/PhD",
+      "startDate": "2020-09-01",
+      "endDate": "2024-05-01",
+      "score": "GPA or Honors (if applicable)"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award or Recognition Title",
+      "awarder": "Organization that gave the award",
+      "date": "2024-01-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "Advanced",
+      "keywords": ["Python", "JavaScript", "SQL", "Java"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "keywords": ["React", "Node.js", "Docker", "AWS", "Git"]
+    },
+    {
+      "name": "Soft Skills",
+      "keywords": ["Leadership", "Communication", "Problem Solving", "Team Management"]
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication Title",
+      "publisher": "Journal or Conference Name",
+      "releaseDate": "2024-01-01",
+      "url": "https://publication-url.com"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "1.0.0",
+    "theme": "@jsonresume/jsonresume-theme-professional"
+  }
+}
