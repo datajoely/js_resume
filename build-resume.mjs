@@ -151,6 +151,39 @@ function generateHTML(data) {
       font-size: 0.8rem;
     }
     
+    .download-pdf {
+      position: fixed;
+      top: 1rem;
+      right: 4.5rem; /* Position next to the theme indicator */
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      user-select: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .download-pdf:hover {
+      background: var(--border-color);
+      color: var(--text-primary);
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-pdf:active {
+      transform: scale(0.95);
+    }
+    
     .theme-indicator {
       position: fixed;
       top: 1rem;
@@ -366,6 +399,9 @@ function generateHTML(data) {
       .theme-indicator {
         display: none !important;
       }
+      .download-pdf {
+        display: none !important;
+      }
     }
   </style>
   <script>
@@ -477,6 +513,9 @@ function generateHTML(data) {
 </head>
 <body>
   <div class="theme-indicator" title="System theme indicator"><i class="fas fa-adjust"></i></div>
+  <a id="download-pdf-button" class="download-pdf" href="#" title="Download PDF">
+    <i class="fas fa-file-pdf"></i>
+  </a>
   <div class="header">
     <h1 class="name">\${data.basics.name}</h1>
     <div class="label">\${data.basics.label}</div>
@@ -501,7 +540,7 @@ function generateHTML(data) {
         </div>
         <div class="company">\${job.company}</div>
         <div class="work-summary">\${job.summary}</div>
-        \${job.highlights ? \`<ul class="highlights">\${job.highlights.map(h => \`<li>\${h}</li>\`).join('')}</ul>\` : ''}
+        \${job.highlights ? \`<ul class="highlights">\${job.highlights.map(h => \`<li>\${h}</li>\`).join('')}\</ul>\` : ''}
       </div>
     \`).join('')}
   </div>
@@ -576,6 +615,21 @@ function generateHTML(data) {
     \`).join('')}
   </div>
   \` : ''}
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const downloadButton = document.getElementById('download-pdf-button');
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    
+    if (isGitHubPages) {
+      const repoPath = window.location.pathname.split('/')[1];
+      if (repoPath) {
+        downloadButton.href = 'https://github.com/jlevers/resume-builder-1/releases/latest/download/resume.pdf';
+      }
+    } else {
+      downloadButton.href = 'resume.pdf';
+    }
+  });
+  </script>
 </body>
 </html>\`;
 }
