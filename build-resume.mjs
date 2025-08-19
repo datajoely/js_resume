@@ -3,9 +3,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
+import puppeteer from 'puppeteer';
 
-const require = createRequire(import.meta.url);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -14,26 +13,33 @@ async function buildResume() {
     // Read resume.json
     const resumeData = JSON.parse(fs.readFileSync(path.join(__dirname, 'resume.json'), 'utf8'));
     
-    // Use a Node.js subprocess to handle the CommonJS theme
-    const { spawn } = await import('child_process');
+    // Generate HTML directly (no more temporary scripts)
+    const html = generateHTML(resumeData);
     
-    // Create a temporary CommonJS script to handle the theme
-    const tempScript = `
-const fs = require('fs');
-const path = require('path');
-
-// Mock React environment for server-side rendering
-global.window = {};
-global.document = { createElement: () => ({}), createTextNode: () => ({}) };
-
-// Simple template for the professional theme layout
-const resumeData = JSON.parse(fs.readFileSync('resume.json', 'utf8'));
+    // Ensure docs directory exists
+    const docsDir = 'docs';
+    if (!fs.existsSync(docsDir)) {
+      fs.mkdirSync(docsDir, { recursive: true });
+    }
+    
+    // Write HTML file
+    fs.writeFileSync(path.join(docsDir, 'index.html'), html);
+    console.log('Resume HTML built successfully: docs/index.html');
+    
+    // Generate PDF
+    await generatePDF();
+    
+  } catch (error) {
+    console.error('Error building resume:', error);
+    process.exit(1);
+  }
+}
 
 function generateHTML(data) {
-  return \`<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html>
 <head>
-  <title>\${data.basics.name} - Resume</title>
+  <title>${data.basics.name} - Resume</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
@@ -154,7 +160,7 @@ function generateHTML(data) {
     .download-pdf {
       position: fixed;
       top: 1rem;
-      right: 4.5rem; /* Position next to the theme indicator */
+      right: 4.5rem;
       padding: 0.5rem;
       border-radius: 50%;
       background: var(--bg-secondary);
@@ -323,7 +329,6 @@ function generateHTML(data) {
       font-family: 'LMRoman10', serif;
     }
     
-    /* Ensure proper LaTeX-style typography */
     p, li {
       font-size: 1rem;
       line-height: 1.5;
@@ -342,7 +347,6 @@ function generateHTML(data) {
     
     /* Print and PDF optimization */
     @media print {
-      /* Force light mode for PDFs and printing */
       :root {
         --bg-primary: #ffffff !important;
         --bg-secondary: #f8f9fa !important;
@@ -364,7 +368,6 @@ function generateHTML(data) {
         color: #000000 !important;
       }
       
-      /* Just prevent really awkward breaks */
       .section h2 {
         page-break-after: avoid;
         color: #000000 !important;
@@ -395,19 +398,14 @@ function generateHTML(data) {
         color: #0066cc !important;
       }
       
-      /* Hide theme indicator in print */
-      .theme-indicator {
-        display: none !important;
-      }
-      .download-pdf {
+      .theme-indicator, .download-pdf {
         display: none !important;
       }
     }
   </style>
   <script>
-    let currentTheme = 'system'; // 'system', 'light', or 'dark'
+    let currentTheme = 'system';
     
-    // Function to apply theme
     function applyTheme(theme) {
       const root = document.documentElement;
       
@@ -432,7 +430,6 @@ function generateHTML(data) {
         root.style.setProperty('--link-color', '#0066cc');
         root.style.setProperty('--section-border', '#e3e3e3');
       } else {
-        // Reset to system preference
         root.style.removeProperty('--bg-primary');
         root.style.removeProperty('--bg-secondary');
         root.style.removeProperty('--text-primary');
@@ -445,7 +442,6 @@ function generateHTML(data) {
       }
     }
     
-    // Function to update theme indicator
     function updateThemeIndicator() {
       const indicator = document.querySelector('.theme-indicator');
       const icon = indicator.querySelector('i');
@@ -457,7 +453,6 @@ function generateHTML(data) {
         icon.className = 'fas fa-sun';
         indicator.title = 'Light mode (click to switch to system)';
       } else {
-        // System preference
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
           icon.className = 'fas fa-moon';
           indicator.title = 'Dark mode (system preference, click to override)';
@@ -468,7 +463,6 @@ function generateHTML(data) {
       }
     }
     
-    // Function to cycle through themes
     function cycleTheme() {
       if (currentTheme === 'system') {
         currentTheme = 'light';
@@ -480,12 +474,9 @@ function generateHTML(data) {
       
       applyTheme(currentTheme);
       updateThemeIndicator();
-      
-      // Save preference to localStorage
       localStorage.setItem('resume-theme', currentTheme);
     }
     
-    // Listen for system theme changes
     if (window.matchMedia) {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
         if (currentTheme === 'system') {
@@ -494,9 +485,7 @@ function generateHTML(data) {
       });
     }
     
-    // Initialize on page load
     document.addEventListener('DOMContentLoaded', () => {
-      // Load saved theme preference
       const savedTheme = localStorage.getItem('resume-theme');
       if (savedTheme) {
         currentTheme = savedTheme;
@@ -505,7 +494,6 @@ function generateHTML(data) {
       
       updateThemeIndicator();
       
-      // Add click event listener
       const indicator = document.querySelector('.theme-indicator');
       indicator.addEventListener('click', cycleTheme);
     });
@@ -517,144 +505,146 @@ function generateHTML(data) {
     <i class="fas fa-file-pdf"></i>
   </a>
   <div class="header">
-    <h1 class="name">\${data.basics.name}</h1>
-    <div class="label">\${data.basics.label}</div>
+    <h1 class="name">${data.basics.name}</h1>
+    <div class="label">${data.basics.label}</div>
     <div class="contact">
-      <span class="contact-item"><i class="fas fa-map-marker-alt"></i>\${data.basics.location.city}, \${data.basics.location.region}, \${data.basics.location.countryCode}</span>
-      <span class="contact-item"><i class="fas fa-envelope"></i>\${data.basics.email}</span>
-      \${data.basics.profiles.map(profile => {
+      <span class="contact-item"><i class="fas fa-map-marker-alt"></i>${data.basics.location.city}, ${data.basics.location.region}, ${data.basics.location.countryCode}</span>
+      <span class="contact-item"><i class="fas fa-envelope"></i>${data.basics.email}</span>
+      ${data.basics.profiles.map(profile => {
         const icon = profile.network.toLowerCase() === 'github' ? 'fab fa-github' : 'fas fa-link';
-        return \`<span class="contact-item"><i class="\${icon}"></i><a href="\${profile.url}">\${profile.username}</a></span>\`;
+        return `<span class="contact-item"><i class="${icon}"></i><a href="${profile.url}">${profile.username}</a></span>`;
       }).join('')}
     </div>
-    <div class="summary">\${data.basics.summary}</div>
+    <div class="summary">${data.basics.summary}</div>
   </div>
 
   <div class="section">
     <h2>Experience</h2>
-    \${data.work.map(job => \`
+    ${data.work.map(job => `
       <div class="work-item">
         <div class="work-header">
-          <div class="work-title">\${job.position}</div>
-          <div class="work-date">\${job.startDate} - \${job.endDate || 'Present'}</div>
+          <div class="work-title">${job.position}</div>
+          <div class="work-date">${job.startDate} - ${job.endDate || 'Present'}</div>
         </div>
-        <div class="company">\${job.company}</div>
-        <div class="work-summary">\${job.summary}</div>
-        \${job.highlights ? \`<ul class="highlights">\${job.highlights.map(h => \`<li>\${h}</li>\`).join('')}\</ul>\` : ''}
+        <div class="company">${job.company}</div>
+        <div class="work-summary">${job.summary}</div>
+        ${job.highlights ? `<ul class="highlights">${job.highlights.map(h => `<li>${h}</li>`).join('')}</ul>` : ''}
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
 
-  \${data.education ? \`
+  ${data.education ? `
   <div class="section">
     <h2>Education</h2>
-    \${data.education.map(edu => \`
+    ${data.education.map(edu => `
       <div class="work-item">
         <div class="work-header">
-          <div class="work-title">\${edu.studyType} in \${edu.area}</div>
-          <div class="work-date">\${edu.startDate} - \${edu.endDate}</div>
+          <div class="work-title">${edu.studyType} in ${edu.area}</div>
+          <div class="work-date">${edu.startDate} - ${edu.endDate}</div>
         </div>
-        <div class="company">\${edu.institution}</div>
-        \${edu.score ? \`<div class="work-summary">Grade: \${edu.score}</div>\` : ''}
+        <div class="company">${edu.institution}</div>
+        ${edu.score ? `<div class="work-summary">Grade: ${edu.score}</div>` : ''}
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
-  \` : ''}
+  ` : ''}
 
-  \${data.awards ? \`
+  ${data.awards ? `
   <div class="section">
     <h2>Awards</h2>
-    \${data.awards.map(award => \`
+    ${data.awards.map(award => `
       <div class="work-item">
         <div class="work-header">
-          <div class="work-title">\${award.title}</div>
+          <div class="work-title">${award.title}</div>
         </div>
-        <div class="company">\${award.awarder}</div>
+        <div class="company">${award.awarder}</div>
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
-  \` : ''}
+  ` : ''}
 
-  \${data.skills ? \`
+  ${data.skills ? `
   <div class="section">
     <h2>Skills</h2>
-    \${data.skills.map(skill => \`
+    ${data.skills.map(skill => `
       <div class="skills-category">
-        <span class="skills-name">\${skill.name}:</span>
-        <span class="skills-keywords">\${skill.keywords.join(', ')}</span>
+        <span class="skills-name">${skill.name}:</span>
+        <span class="skills-keywords">${skill.keywords.join(', ')}</span>
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
-  \` : ''}
+  ` : ''}
 
-  \${data.projects ? \`
+  ${data.projects ? `
   <div class="section">
     <h2>Projects</h2>
-    \${data.projects.map(project => \`
+    ${data.projects.map(project => `
       <div class="work-item">
         <div class="work-header">
-          <div class="work-title"><a href="\${project.url}">\${project.name}</a></div>
+          <div class="work-title"><a href="${project.url}">${project.name}</a></div>
         </div>
-        <div class="work-summary">\${project.summary}</div>
+        <div class="work-summary">${project.summary}</div>
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
-  \` : ''}
+  ` : ''}
 
-  \${data.publications ? \`
+  ${data.publications ? `
   <div class="section">
     <h2>Publications</h2>
-    \${data.publications.map(pub => \`
+    ${data.publications.map(pub => `
       <div class="work-item">
         <div class="work-header">
-          <div class="work-title"><a href="\${pub.url}">\${pub.name}</a></div>
-          <div class="work-date">\${pub.releaseDate}</div>
+          <div class="work-title"><a href="${pub.url}">${pub.name}</a></div>
+          <div class="work-date">${pub.releaseDate}</div>
         </div>
-        <div class="company">\${pub.publisher}</div>
+        <div class="company">${pub.publisher}</div>
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
-  \` : ''}
+  ` : ''}
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.getElementById('download-pdf-button');
     const isGitHubPages = window.location.hostname.includes('github.io');
     
     if (isGitHubPages) {
-      const repoPath = window.location.pathname.split('/')[1];
-      if (repoPath) {
-        downloadButton.href = 'https://github.com/jlevers/resume-builder-1/releases/latest/download/resume.pdf';
-      }
+      // For GitHub Pages, link to the PDF in the GitHub repository
+      downloadButton.href = 'https://github.com/datajoely/resume-builder/blob/main/resume.pdf';
     } else {
       downloadButton.href = 'resume.pdf';
     }
   });
   </script>
 </body>
-</html>\`;
+</html>`;
 }
 
-const docsDir = 'docs';
-if (!fs.existsSync(docsDir)) {
-  fs.mkdirSync(docsDir, { recursive: true });
-}
-
-const html = generateHTML(resumeData);
-fs.writeFileSync(path.join(docsDir, 'index.html'), html);
-console.log('Resume built successfully: docs/index.html');
-`;
-
-    // Write and execute the temporary script
-    fs.writeFileSync(path.join(__dirname, 'temp-build.cjs'), tempScript);
+async function generatePDF() {
+  try {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
     
-    const { execSync } = await import('child_process');
-    execSync('node temp-build.cjs', { cwd: __dirname, stdio: 'inherit' });
+    // Load the HTML file
+    const htmlPath = path.join(__dirname, 'docs', 'index.html');
+    await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
     
-    // Clean up
-    fs.unlinkSync(path.join(__dirname, 'temp-build.cjs'));
+    // Generate PDF
+    await page.pdf({
+      path: 'resume.pdf',
+      format: 'A4',
+      margin: {
+        top: '10mm',
+        right: '10mm',
+        bottom: '10mm',
+        left: '10mm'
+      }
+    });
     
+    console.log('PDF generated successfully: resume.pdf');
+    await browser.close();
   } catch (error) {
-    console.error('Error building resume:', error);
+    console.error('Error generating PDF:', error);
     process.exit(1);
   }
 }

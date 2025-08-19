@@ -20,8 +20,8 @@ build:
 	node build-resume.mjs
 
 # Build HTML and generate PDF
-pdf: build
-	node pdf-generator.js
+pdf:
+	node build-resume.mjs
 
 # Clean generated files
 clean:

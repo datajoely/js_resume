@@ -122,7 +122,7 @@
     .download-pdf {
       position: fixed;
       top: 1rem;
-      right: 4.5rem; /* Position next to the theme indicator */
+      right: 4.5rem;
       padding: 0.5rem;
       border-radius: 50%;
       background: var(--bg-secondary);
@@ -291,7 +291,6 @@
       font-family: 'LMRoman10', serif;
     }
     
-    /* Ensure proper LaTeX-style typography */
     p, li {
       font-size: 1rem;
       line-height: 1.5;
@@ -310,7 +309,6 @@
     
     /* Print and PDF optimization */
     @media print {
-      /* Force light mode for PDFs and printing */
       :root {
         --bg-primary: #ffffff !important;
         --bg-secondary: #f8f9fa !important;
@@ -332,7 +330,6 @@
         color: #000000 !important;
       }
       
-      /* Just prevent really awkward breaks */
       .section h2 {
         page-break-after: avoid;
         color: #000000 !important;
@@ -363,19 +360,14 @@
         color: #0066cc !important;
       }
       
-      /* Hide theme indicator in print */
-      .theme-indicator {
-        display: none !important;
-      }
-      .download-pdf {
+      .theme-indicator, .download-pdf {
         display: none !important;
       }
     }
   </style>
   <script>
-    let currentTheme = 'system'; // 'system', 'light', or 'dark'
+    let currentTheme = 'system';
     
-    // Function to apply theme
     function applyTheme(theme) {
       const root = document.documentElement;
       
@@ -400,7 +392,6 @@
         root.style.setProperty('--link-color', '#0066cc');
         root.style.setProperty('--section-border', '#e3e3e3');
       } else {
-        // Reset to system preference
         root.style.removeProperty('--bg-primary');
         root.style.removeProperty('--bg-secondary');
         root.style.removeProperty('--text-primary');
@@ -413,7 +404,6 @@
       }
     }
     
-    // Function to update theme indicator
     function updateThemeIndicator() {
       const indicator = document.querySelector('.theme-indicator');
       const icon = indicator.querySelector('i');
@@ -425,7 +415,6 @@
         icon.className = 'fas fa-sun';
         indicator.title = 'Light mode (click to switch to system)';
       } else {
-        // System preference
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
           icon.className = 'fas fa-moon';
           indicator.title = 'Dark mode (system preference, click to override)';
@@ -436,7 +425,6 @@
       }
     }
     
-    // Function to cycle through themes
     function cycleTheme() {
       if (currentTheme === 'system') {
         currentTheme = 'light';
@@ -448,12 +436,9 @@
       
       applyTheme(currentTheme);
       updateThemeIndicator();
-      
-      // Save preference to localStorage
       localStorage.setItem('resume-theme', currentTheme);
     }
     
-    // Listen for system theme changes
     if (window.matchMedia) {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
         if (currentTheme === 'system') {
@@ -462,9 +447,7 @@
       });
     }
     
-    // Initialize on page load
     document.addEventListener('DOMContentLoaded', () => {
-      // Load saved theme preference
       const savedTheme = localStorage.getItem('resume-theme');
       if (savedTheme) {
         currentTheme = savedTheme;
@@ -473,7 +456,6 @@
       
       updateThemeIndicator();
       
-      // Add click event listener
       const indicator = document.querySelector('.theme-indicator');
       indicator.addEventListener('click', cycleTheme);
     });
@@ -636,8 +618,8 @@
     const isGitHubPages = window.location.hostname.includes('github.io');
     
     if (isGitHubPages) {
-      // For GitHub Pages, try to download from the repository root
-      downloadButton.href = 'https://datajoely.github.io/resume-builder/resume.pdf';
+      // For GitHub Pages, link to the PDF in the GitHub repository
+      downloadButton.href = 'https://github.com/datajoely/resume-builder/blob/main/resume.pdf';
     } else {
       downloadButton.href = 'resume.pdf';
     }
