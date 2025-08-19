@@ -7,7 +7,6 @@ help:
 	@echo "  build     - Build HTML resume from JSON"
 	@echo "  pdf       - Build HTML and generate PDF resume"
 	@echo "  clean     - Remove generated files (HTML, PDF)"
-	@echo "  clean-all - Remove all generated files including scripts"
 	@echo "  all       - Install dependencies and build everything"
 	@echo "  setup     - Same as install (useful for CI/CD)"
 
@@ -27,10 +26,6 @@ pdf: build
 # Clean generated files
 clean:
 	rm -f docs/index.html resume.pdf
-
-# Clean everything including scripts
-clean-all:
-	rm -f docs/index.html resume.pdf pdf-generator.js
 
 # Build everything (install + build + pdf)
 all: install build pdf
