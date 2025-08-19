@@ -1,5 +1,3 @@
-resume.pdf
-index.html
+node_modules/
 bun.lock
-node_modules
 package-lock.json
