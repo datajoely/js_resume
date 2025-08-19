@@ -54,7 +54,7 @@
       "endDate": "2024-08-31",
       "summary": "Product leader for developer tooling and durable ML delivery; stewarded open source and incubated multiple products end-to-end.",
       "highlights": [
-        "Stewarded Kedro (10.5k ★) through LF AI & Data incubation to graduation. Led a customer-driven research initiative that identified and addressed key pain points in Kedro's configuration experience, resulting in a comprehensive overhaul that significantly reduced configuration overhead; continue to serve on the Kedro Technical Steering Committee (TSC).",
+        "Stewarded Kedro (10.5k ★) through Linux Foundation for AI & Data incubation to graduation. Led a customer-driven research initiative that identified and addressed key pain points in Kedro's configuration experience, resulting in a comprehensive overhaul that significantly reduced configuration overhead; continue to serve on the Kedro Technical Steering Committee (TSC).",
         "Incubated an internal multi-tenant 'ML Models as a Service' platform from Aug 2023 to initial client deployments in 2024.",
         "Created Alloy, an internal build tool to compose Kedro projects from reusable building blocks; simplified packaging, CI/CD, and testing, driving organisation-wide adoption.",
         "Directed cross-functional teams to drive consistency and raise engineering excellence across a global ML cross-industry product portfolio.",
@@ -92,7 +92,7 @@
   ],
   "projects": [ 
     {
-      "name": "Kedro (LF AI & Data)",
+      "name": "Kedro (Linux Foundation for AI & Data)",
       "url": "https://github.com/kedro-org/kedro",
       "summary": "Kedro is a toolbox for production-ready data science. It uses software engineering best practices to help create data engineering and data science pipelines that are reproducible, maintainable, and modular."
     }
