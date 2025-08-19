@@ -636,10 +636,8 @@
     const isGitHubPages = window.location.hostname.includes('github.io');
     
     if (isGitHubPages) {
-      const repoPath = window.location.pathname.split('/')[1];
-      if (repoPath) {
-        downloadButton.href = 'https://github.com/jlevers/resume-builder-1/releases/latest/download/resume.pdf';
-      }
+      // For GitHub Pages, try to download from the repository root
+      downloadButton.href = 'https://datajoely.github.io/resume-builder/resume.pdf';
     } else {
       downloadButton.href = 'resume.pdf';
     }
