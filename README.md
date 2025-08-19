@@ -16,7 +16,7 @@ An automated resume builder that generates HTML and PDF resumes from a structure
 
 ### Prerequisites
 
-- Node.js 18+ or Bun
+- Bun (`curl -fsSL https://bun.sh/install | bash`)
 - Chrome/Chromium (for PDF generation)
 
 ### Installation
@@ -81,26 +81,3 @@ The project includes a GitHub Actions workflow that automatically builds and dep
 1. Push your changes to the main branch
 2. GitHub Actions will automatically build the resume
 3. Your resume will be available at `https://username.github.io/repository-name`
-
-### Manual Deployment
-
-```bash
-# Deploy to any static hosting service
-# The docs/ folder contains your built resume```
-
-### Makefile Commands
-
-- `make install` - Install dependencies
-- `make build` - Build HTML resume
-- `make pdf` - Build HTML and generate PDF
-- `make clean` - Remove generated files
-- `make all` - Complete setup and build
-
-## 🔍 Troubleshooting
-
-### Common Issues
-
-1. **Chrome not found**: Run `npm run setup` to install Chrome for Puppeteer
-2. **Build errors**: Check that your `resume.json` is valid JSON
-3. **PDF generation fails**: Ensure Chrome is properly installed and accessible
-
