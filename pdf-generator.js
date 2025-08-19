@@ -21,10 +21,10 @@ async function generatePDF() {
       path: 'resume.pdf',
       format: 'A4',
       margin: {
-        top: '0',
-        right: '0',
-        bottom: '0',
-        left: '0'
+        top: '10mm',
+        right: '10mm',
+        bottom: '10mm',
+        left: '10mm'
       }
     });
     
