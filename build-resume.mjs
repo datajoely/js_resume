@@ -49,7 +49,7 @@ function generateHTML(data) {
       --text-muted: #555555;
       --text-muted-light: #444444;
       --border-color: #e3e3e3;
-      --link-color: #000000;
+      --link-color: #0066cc;
       --section-border: #e3e3e3;
     }
 
@@ -318,7 +318,7 @@ function generateHTML(data) {
         --text-muted: #555555 !important;
         --text-muted-light: #444444 !important;
         --border-color: #e3e3e3 !important;
-        --link-color: #000000 !important;
+        --link-color: #0066cc !important;
         --section-border: #e3e3e3 !important;
       }
       
@@ -359,7 +359,7 @@ function generateHTML(data) {
       }
       
       .contact a, a {
-        color: #000000 !important;
+        color: #0066cc !important;
       }
       
       /* Hide theme indicator in print */
@@ -393,7 +393,7 @@ function generateHTML(data) {
         root.style.setProperty('--text-muted', '#555555');
         root.style.setProperty('--text-muted-light', '#444444');
         root.style.setProperty('--border-color', '#e3e3e3');
-        root.style.setProperty('--link-color', '#000000');
+        root.style.setProperty('--link-color', '#0066cc');
         root.style.setProperty('--section-border', '#e3e3e3');
       } else {
         // Reset to system preference
@@ -522,6 +522,20 @@ function generateHTML(data) {
   </div>
   \` : ''}
 
+  \${data.awards ? \`
+  <div class="section">
+    <h2>Awards</h2>
+    \${data.awards.map(award => \`
+      <div class="work-item">
+        <div class="work-header">
+          <div class="work-title">\${award.title}</div>
+        </div>
+        <div class="company">\${award.awarder}</div>
+      </div>
+    \`).join('')}
+  </div>
+  \` : ''}
+
   \${data.skills ? \`
   <div class="section">
     <h2>Skills</h2>
@@ -558,20 +572,6 @@ function generateHTML(data) {
           <div class="work-date">\${pub.releaseDate}</div>
         </div>
         <div class="company">\${pub.publisher}</div>
-      </div>
-    \`).join('')}
-  </div>
-  \` : ''}
-
-  \${data.awards ? \`
-  <div class="section">
-    <h2>Awards</h2>
-    \${data.awards.map(award => \`
-      <div class="work-item">
-        <div class="work-header">
-          <div class="work-title">\${award.title}</div>
-        </div>
-        <div class="company">\${award.awarder}</div>
       </div>
     \`).join('')}
   </div>
