@@ -54,9 +54,9 @@
       "endDate": "2024-08-31",
       "summary": "Product leader for developer tooling and durable ML delivery; stewarded open source and incubated multiple products end-to-end.",
       "highlights": [
-        "Stewarded Kedro (10.5k ★) through Linux Foundation for AI & Data incubation to graduation. Led a customer-driven research initiative that identified and addressed key pain points in Kedro's configuration experience, resulting in a comprehensive overhaul that significantly reduced configuration overhead; continue to serve on the Kedro Technical Steering Committee (TSC).",
         "Incubated an internal multi-tenant 'ML Models as a Service' platform from Aug 2023 to initial client deployments in 2024.",
         "Created Alloy, an internal build tool to compose Kedro projects from reusable building blocks; simplified packaging, CI/CD, and testing, driving organisation-wide adoption.",
+        "Drove velocity on the open-source project Kedro (10.5k ★) first as a contributor and then as a product lead, leading efforts across product research, developer relations, and developing overall product toolkit. Stewarded Kedro through the Linux Foundation for AI & Data from incubation to graduated project. Drove a customer-driven research initiative that overhauled Kedro's dynamic configuration experience, significantly reducing overhead. Continue to serve on the Kedro Technical Steering Committee (TSC) outside of the organisation.",
         "Directed cross-functional teams to drive consistency and raise engineering excellence across a global ML cross-industry product portfolio.",
         "Defined privacy-preserving product telemetry standards and rollout practices.",
         "Organised developer community events and Demo Days to drive reuse and collaboration."
@@ -72,7 +72,7 @@
       "summary": "Forward-deployed Data Engineer delivering production ML across pharma, manufacturing, insurance, and motorsport.",
       "highlights": [
         "Built reinforcement-learning-driven race strategy software for a championship-winning Formula E team; led Phase 1 (Engineering) and Phase 2 (Product).",
-        "Designed feature engineering and deployment pipelines across vaccine production, diabetes patient journeys, and motor insurance pricing."
+        "Designed feature engineering and MLOps deployment pipelines across vaccine production, diabetes patient journeys, motor insurance pricing, water treatment amongst others."
       ]
     },
     {
