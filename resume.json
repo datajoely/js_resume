@@ -25,12 +25,14 @@
       "position": "Director of Platform",
       "url": "https://www.aneira.health",
       "startDate": "2024-09-01",
+      "endDate" : "2025-08-31",
       "summary": "Leading development of a GCP-native data platform providing women with personalised, clinically validated healthcare insights that directly improve patient outcomes. Simultaneously building a world-class multimodal research platform integrating de-identified EHR, genomics, DICOM, and wearable data.",
       "highlights": [
         "Delivered a production grade data platform integrating EHR, genomics, and wearable data streams.",
         "Established FHIR-compliant architecture with interoperability as a core feature, including an MCP layer to enable secure LLM use cases (e.g., triage, coaching).",
         "Directed product discovery and initial development to expose the research platform to the first external pharmaceutical customer.",
-        "Operated in a seed-stage context, spanning product, platform, and engineering execution."
+        "Operated in a seed-stage context, spanning product, platform, and engineering execution.",
+        "Position ended as the company was unable to secure follow-on funding in a difficult fundraising environment."
       ]
     },
     {
