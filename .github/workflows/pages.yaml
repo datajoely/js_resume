@@ -1,4 +1,4 @@
-name: Resume Creator from JSON
+name: Build and Deploy Resume to GitHub Pages
 on:
   push:
     branches:
@@ -30,7 +30,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
           force_orphan: true
-          cname: # Leave empty for no custom domain
+          cname: ""
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'Deploy resume to GitHub Pages'

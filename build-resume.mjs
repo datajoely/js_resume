@@ -45,6 +45,7 @@ function generateHTML(data) {
   <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">  
   <style>
     :root {
       /* Light mode colors (default) */
@@ -87,14 +88,14 @@ function generateHTML(data) {
     }
     
     html {
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       background: var(--bg-primary);
       font-size: 14px;
       line-height: 1.4;
     }
     
     body { 
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       margin: 0 auto; 
       line-height: 1.4; 
       color: var(--text-primary); 
@@ -116,7 +117,7 @@ function generateHTML(data) {
       margin: 0 0 0.5rem 0; 
       color: var(--text-primary);
       text-align: center;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       letter-spacing: 0.02em;
     }
     
@@ -124,10 +125,9 @@ function generateHTML(data) {
       font-size: 1.1rem; 
       color: var(--text-primary); 
       margin: 0 0 1rem 0; 
-      font-weight: normal;
-      font-style: italic;
+      font-weight: bold;
       text-align: center;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     .contact { 
@@ -135,7 +135,7 @@ function generateHTML(data) {
       font-size: 0.9rem;
       text-align: center;
       line-height: 1.4;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     .contact a { 
@@ -160,7 +160,7 @@ function generateHTML(data) {
     .download-pdf {
       position: fixed;
       top: 1rem;
-      right: 4.5rem;
+      right: 1rem;
       padding: 0.5rem;
       border-radius: 50%;
       background: var(--bg-secondary);
@@ -192,7 +192,7 @@ function generateHTML(data) {
     
     .theme-indicator {
       position: fixed;
-      top: 1rem;
+      top: 4.5rem;
       right: 1rem;
       padding: 0.5rem;
       border-radius: 50%;
@@ -232,7 +232,7 @@ function generateHTML(data) {
       margin: 1.5rem 0 0 0;
       font-size: 1rem;
       line-height: 1.6;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
@@ -252,7 +252,7 @@ function generateHTML(data) {
       font-weight: bold;
       margin-top: 1.5rem;
       text-align: left;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       letter-spacing: 0.01em;
     }
     
@@ -272,14 +272,14 @@ function generateHTML(data) {
       font-weight: bold;
       font-size: 1rem;
       color: var(--text-primary);
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     .work-date {
       color: var(--text-muted); 
       font-size: 0.9rem; 
       font-style: italic;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       white-space: nowrap;
     }
     
@@ -288,7 +288,7 @@ function generateHTML(data) {
       font-size: 1rem; 
       color: var(--text-muted-light);
       font-style: italic;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       margin-bottom: 0.5rem;
     }
     
@@ -296,7 +296,7 @@ function generateHTML(data) {
       margin: 0.5rem 0; 
       font-size: 1rem;
       line-height: 1.5;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     .highlights { 
@@ -309,7 +309,7 @@ function generateHTML(data) {
       margin: 0.25rem 0; 
       line-height: 1.4;
       font-size: 1rem;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     .skills-category { 
@@ -320,19 +320,19 @@ function generateHTML(data) {
     .skills-name { 
       font-weight: bold; 
       color: var(--text-primary);
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     .skills-keywords { 
       margin-left: 0.5rem; 
       color: var(--text-primary); 
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     p, li {
       font-size: 1rem;
       line-height: 1.5;
-      font-family: 'LMRoman10', serif;
+      font-family: 'LMRoman10', 'Space Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     }
     
     a {
@@ -606,14 +606,7 @@ function generateHTML(data) {
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.getElementById('download-pdf-button');
-    const isGitHubPages = window.location.hostname.includes('github.io');
-    
-    if (isGitHubPages) {
-      // For GitHub Pages, link to the PDF in the GitHub repository
-      downloadButton.href = 'https://github.com/datajoely/resume-builder/blob/main/resume.pdf';
-    } else {
-      downloadButton.href = 'resume.pdf';
-    }
+    downloadButton.href = 'resume.pdf';
   });
   </script>
 </body>
@@ -640,19 +633,20 @@ async function generatePDF() {
     const htmlPath = path.join(__dirname, 'docs', 'index.html');
     await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
     
-    // Generate PDF
+    // Generate PDF in the docs directory for GitHub Pages
+    const pdfPath = path.join(__dirname, 'docs', 'resume.pdf');
     await page.pdf({
-      path: 'resume.pdf',
+      path: pdfPath,
       format: 'A4',
       margin: {
-        top: '10mm',
-        right: '10mm',
-        bottom: '10mm',
-        left: '10mm'
+        top: '12.5mm',
+        right: '12.5mm',
+        bottom: '12.5mm',
+        left: '12.5mm'
       }
     });
     
-    console.log('PDF generated successfully: resume.pdf');
+    console.log('PDF generated successfully: docs/resume.pdf');
     await browser.close();
   } catch (error) {
     console.error('Error generating PDF:', error);

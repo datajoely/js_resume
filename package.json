@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node build-resume.mjs",
-    "pdf": "npm run build && puppeteer --wait-until networkidle0 --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format A4 print ./docs/index.html resume.pdf"
+    "pdf": "npm run build && puppeteer --wait-until networkidle0 --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format A4 print ./docs/index.html ./docs/resume.pdf"
   },
   "type": "module",
   "dependencies": {
@@ -12,6 +12,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/datajoely/js_resume.git"
+    "url": "git+https://github.com/datajoely/resume-builder.git"
   }
 }
