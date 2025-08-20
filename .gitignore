@@ -1,3 +1,7 @@
 node_modules/
 bun.lock
 package-lock.json
+
+# Generated files - these will be deployed to gh-pages branch
+resume.pdf
+docs/
