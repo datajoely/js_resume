@@ -14,7 +14,7 @@ async function buildResume() {
     const resumeData = JSON.parse(fs.readFileSync(path.join(__dirname, 'resume.json'), 'utf8'));
     
     // Generate HTML directly (no more temporary scripts)
-    const html = generateHTML(resumeData);
+    const html = await generateHTML(resumeData);
     
     // Ensure docs directory exists
     const docsDir = 'docs';
@@ -35,7 +35,34 @@ async function buildResume() {
   }
 }
 
-function generateHTML(data) {
+async function generateHTML(data) {
+  // Get git SHA for version tracking
+  let gitSha = 'unknown';
+  
+  // First try to get from environment variables (GitHub Actions)
+  if (process.env.GITHUB_SHA) {
+    gitSha = process.env.GITHUB_SHA.substring(0, 7);
+    console.log('Git SHA from env:', gitSha);
+  } else {
+    try {
+      // Use import instead of require for ES modules
+      const { execSync } = await import('child_process');
+      gitSha = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
+      console.log('Git SHA from git command:', gitSha);
+    } catch (error) {
+      console.log('Could not get git SHA:', error.message);
+      // Try alternative method
+      try {
+        const { execSync } = await import('child_process');
+        const result = execSync('git log --oneline -1', { encoding: 'utf8' });
+        gitSha = result.split(' ')[0];
+        console.log('Alternative Git SHA:', gitSha);
+      } catch (altError) {
+        console.log('Alternative method also failed:', altError.message);
+      }
+    }
+  }
+
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -261,6 +288,19 @@ function generateHTML(data) {
       transform: scale(0.95);
     }
     
+    .git-sha {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+      font-family: 'Space Mono', monospace;
+      z-index: 1000;
+      user-select: none;
+      pointer-events: none;
+    }
+    
     .summary {
       text-align: center;
       margin: 1.5rem 0 0 0;
@@ -432,7 +472,7 @@ function generateHTML(data) {
         color: #0066cc !important;
       }
       
-      .theme-indicator, .download-pdf, .github-link {
+      .theme-indicator, .download-pdf, .github-link, .git-sha {
         display: none !important;
       }
     }
@@ -544,6 +584,7 @@ function generateHTML(data) {
   </script>
 </head>
 <body>
+  <div class="git-sha" title="Git commit SHA">${gitSha}</div>
   <div class="theme-indicator" title="System theme indicator"><i class="fas fa-adjust"></i></div>
   <a id="download-pdf-button" class="download-pdf" href="#" title="Download PDF">
     <i class="fas fa-file-pdf"></i>
@@ -653,7 +694,32 @@ function generateHTML(data) {
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.getElementById('download-pdf-button');
-    downloadButton.href = 'resume.pdf';
+    
+    // Set the PDF download link
+    const pdfUrl = 'resume.pdf';
+    downloadButton.href = pdfUrl;
+    
+    // Add click event to ensure proper download behavior
+    downloadButton.addEventListener('click', (e) => {
+      // Force download behavior
+      downloadButton.download = 'resume.pdf';
+      
+      // Check if PDF is accessible
+      fetch(pdfUrl, { method: 'HEAD' })
+        .then(response => {
+          if (!response.ok) {
+            console.warn('PDF file not accessible:', response.status);
+            // Optionally disable the button or show a message
+            downloadButton.style.opacity = '0.5';
+            downloadButton.title = 'PDF not available';
+          }
+        })
+        .catch(error => {
+          console.error('Error checking PDF:', error);
+          downloadButton.style.opacity = '0.5';
+          downloadButton.title = 'PDF not available';
+        });
+    });
   });
   </script>
 </body>
