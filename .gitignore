@@ -4,4 +4,4 @@ package-lock.json
 
 # Generated files - these will be deployed to gh-pages branch
 resume.pdf
-docs/
+# docs/ directory is now included for GitHub Pages deployment

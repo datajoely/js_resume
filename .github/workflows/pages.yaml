@@ -56,6 +56,9 @@ jobs:
           head -20 docs/index.html
           echo "Checking if Google Analytics is included:"
           grep -i "gtag" docs/index.html || echo "Google Analytics not found in HTML"
+          echo "Checking PDF file:"
+          ls -la docs/resume.pdf
+          echo "PDF file size: $(stat -c%s docs/resume.pdf) bytes"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
