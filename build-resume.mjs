@@ -227,6 +227,40 @@ function generateHTML(data) {
       font-size: 1rem;
     }
     
+    .github-link {
+      position: fixed;
+      top: 8rem;
+      right: 1rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      user-select: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .github-link:hover {
+      background: var(--border-color);
+      color: var(--text-primary);
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .github-link:active {
+      transform: scale(0.95);
+    }
+    
     .summary {
       text-align: center;
       margin: 1.5rem 0 0 0;
@@ -398,7 +432,7 @@ function generateHTML(data) {
         color: #0066cc !important;
       }
       
-      .theme-indicator, .download-pdf {
+      .theme-indicator, .download-pdf, .github-link {
         display: none !important;
       }
     }
@@ -498,11 +532,24 @@ function generateHTML(data) {
       indicator.addEventListener('click', cycleTheme);
     });
   </script>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVE26YF8FE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VVE26YF8FE');
+  </script>
 </head>
 <body>
   <div class="theme-indicator" title="System theme indicator"><i class="fas fa-adjust"></i></div>
   <a id="download-pdf-button" class="download-pdf" href="#" title="Download PDF">
     <i class="fas fa-file-pdf"></i>
+  </a>
+  <a href="https://github.com/datajoely/resume-builder/tree/main" class="github-link" title="View on GitHub" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
   </a>
   <div class="header">
     <h1 class="name">${data.basics.name}</h1>

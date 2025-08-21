@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-page:
     runs-on: ubuntu-latest
@@ -13,6 +20,14 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Debug environment
+        run: |
+          echo "Current working directory: $(pwd)"
+          echo "Directory contents:"
+          ls -la
+          echo "Node version: $(node --version)"
+          echo "NPM version: $(npm --version)"
+      
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
@@ -21,16 +36,35 @@ jobs:
       - name: Setup dependencies
         run: make setup
       
-      - name: Build resume and generate PDF
-        run: make pdf
+      - name: Build resume HTML
+        run: |
+          echo "Building resume HTML..."
+          make build
+          echo "Build completed. Checking output..."
       
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Generate PDF (optional)
+        run: |
+          echo "Generating PDF..."
+          make pdf
+          echo "PDF generation completed."
+      
+      - name: Verify build output
+        run: |
+          echo "Checking if docs/index.html was created:"
+          ls -la docs/
+          echo "Checking HTML content (first few lines):"
+          head -20 docs/index.html
+          echo "Checking if Google Analytics is included:"
+          grep -i "gtag" docs/index.html || echo "Google Analytics not found in HTML"
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          force_orphan: true
-          cname: ""
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'Deploy resume to GitHub Pages'
+          path: ./docs
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
